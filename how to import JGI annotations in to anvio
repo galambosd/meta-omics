@@ -1,0 +1,64 @@
+HOW TO IMPORT JGI ORF CALLS, FUNCTIONAL ANNOTATIONS, AND TAXONOMY ANNOTATIONS INTO ANVIO 2.0:
+
+**I am assuming you are more or less following along the anvi'o tutorial here: http://merenlab.org/2016/06/22/anvio-tutorial-v2/
+However, here we add a few steps so you can import external data from JGI.***
+
+FOR METAGENOMES:
+
+1) Fix your contigs using the anvio script and SAVE the report file for step 3. 
+Here, we simplify the names and remove contigs less than 1kb.
+$ anvi-script-reformat-fasta [contigs file name] -o [new contigs file name] -l 1000 --simplify-names
+
+
+2) If you submitted a metagenome assembly that INCLUDES contigs smaller than 1kb to JGI, then you have to run this script
+in order to remove all contigs from the JGI output that are smaller than 1kb. (anvi'o doesn't like it if your annotations matrices 
+have contigs that are missing from the contigs file.)
+
+$ python remove_contigs_smaller_than_1000bp_from_gff_gene_product_files.py [fasta file] [gff file] [gene_product file]
+$ python remove_contigs_smaller_than_1000bp_from_ko_files_only.py [fasta file]  [ko file]
+$ python remove_contigs_smaller_than_1000bp_from_phylodist_files_only.py [fasta file] [phylodist]
+
+These scripts take a while to run. If you already removed all contigs smaller than 1000bp from 
+the assemblies you submitted to JGI, then skip this step.
+
+
+3) Create an external gene calls matrix. This will create an outfile that ends in '_external_gene_calls_matrix.txt'
+$ python convert_jgi_orfs_to_anvi_matrix_ORFs_metagenome.py [anvio_reformat_fasta_report_file] [jgi map file] [jgi .gff file]
+
+
+4) Use anvio to make your contigs database using the table you created, and then run hmms:
+$ anvi-gen-contigs-database -f [fasta file] --split-length -1 --external-gene-calls [_external_gene_calls_matrix]
+$ anvi-run-hmms -c CONTIGS.db 
+
+
+5) Create an external functions matrix. This will create an outfile that ends in '_functions_matrix.txt'
+$ python convert_jgi_orfs_to_anvi_matrix_functions_metagenome.py [jgi gene_product.txt file]
+
+
+6) Use anvio to import external functions from the functions matrix:
+$ anvi-import-functions -c CONTIGS.db -i [metagenome_functions_matrix.txt]
+
+
+7) Create an external taxonomy matrix. This will create an outfile that ends in '_taxonomy_matrix.txt'
+$ python make_anvi_taxonomy_table.py [phylodist file]
+
+
+8) Use anvio to import taxonomy calls from the taxonomy matrix:
+$ anvi-import-taxonomy -c CONTIGS.db -i [taxonomy matrix] -p default_matrix
+
+-------------------------------------------------------------------
+
+FOR GENOMES (ie. SAGs):
+1) Create a functions matrix using the JGI KEGG (KO) output.
+$ python convert_jgi_orfs_to_anvi_matrix_functions_genome.py JGI_annotations/JGI_CISA/AD-155-C09_CISA_IMG/2681812801.ko.tab.txt
+
+2) Create an ORF matrix using the assembled.names.map output and the .gff output from JGI.
+$ python convert_jgi_orfs_to_anvi_matrix_ORFs_genome.py JGI_annotations/JGI_CISA/AD-155-C09_CISA_IMG/88570.assembled.names_map JGI_annotations/JGI_CISA/AD-155-C09_CISA_IMG/2681812801.gff
+
+3) Both scripts will give files called "xxx-external_gene_calls_matrix.txt" or "xxxx-functions_matrix.txt" that reflect the names of the JGI files you put in to them.
+ I like to rename mine so they are easier to recognize.
+
+4) Run the anvi'o commands as described on the anvi'o tutorial.
+$ anvi-gen-contigs-database -f AD-155-C09-many_assemblers.CISA.ctg_fixed.fa -o contigs.db --external-gene-calls AD-155-C09_external_gene_calls_matrix.txt
+$ anvi-run-hmms -c contigs.db --num-threads 5
+$ anvi-import-functions -c contigs.db -i AD-155-C09_functions_matrix.txt
