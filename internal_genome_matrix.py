@@ -28,8 +28,8 @@ for line in inLines:
         collection = 'FS854_bins_v232_refined'
     else:
         collection = '{0}_bins_v232'.format(cols[0])
-    prof_path = '/Accounts/galambosd/pangenomics/{0}/profile/PROFILE.db'.format(cols[0])
-    contig_path = 'Accounts/galambosd/pangenomics/{0}/CONTIGS.db'.format(cols[0])
-    outFile.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(name, collection,prof_path, contig_path))
+    prof_path = '{0}/profile/PROFILE.db'.format(cols[0])
+    contig_path = '{0}/CONTIGS.db'.format(cols[0])
+    outFile.write('{0}\t{1}\t{2}\t{3}\t{4}\n'.format(name, cols[1], collection,prof_path, contig_path))
 # close the outfile
 outFile.close()
