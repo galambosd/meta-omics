@@ -20,6 +20,7 @@ pc_lines = args.pc_file.readlines()
 clusters = []
 for line in pc_lines:
     clusters.append(line.rstrip('\n'))
+clusters = set(clusters)
 args.pc_file.close()
 
 #open a text outfile
