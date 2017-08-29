@@ -11,17 +11,45 @@ parser.add_argument('--make-both', action = 'store_true', default = False, help 
 
 args = parser.parse_args()
 
-# make a list out of the protein cluster file
-#open a text outfile
-#open a binary outfile if requested
-
 # open the table
+t_lines = args.t_file.readlines()
+args.t_file.close()
+
+# make a list out of the protein cluster file
+pc_lines = args.pc_file.readlines()
+clusters = []
+for line in pc_lines:
+    clusters.append(line.rstrip('\n'))
+args.pc_file.close()
+
+#open a text outfile
+if args.o == False:
+    out_name = args.t_file.name
+else:
+    out_name = args.o
+outFile = open(out_name, 'w')
+#open a binary outfile if requested
+if args.make-both:
+    outFile2 = open(out_name, 'wb')
+
 # write the first line of names to the outfile
+outFile.write(t_lines[0])
+if args.make-both:
+    outFile2.write(t_lines[0])
 # for every other line
+for line in t_lines[1:]:
     # split the line
+    cols = line.split('\t')
     # if the 1st column (protein cluster) is in the pc list,
+    if cols[0] in clusters:
         # write the line to the outfile
+        outFile.write(line)
         # if make-both:
+        if args.make-both:
+            outFile2.write(line)
             # binary too
 
 # close everything up
+outFile.close()
+if make-both:
+    outFile2.close()
