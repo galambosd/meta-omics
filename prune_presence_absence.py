@@ -7,7 +7,7 @@ parser = ap.ArgumentParser(description = 'Prune a presence-absence table to incl
 parser.add_argument('t_file', metavar = 'TABLE', type = ap.FileType('rb'), help = 'Path to the presence-absence table binary file.')
 parser.add_argument('pc_file', metavar = 'CLUSTERS', type = ap.FileType('r'), help = 'Path to the list of protein clusters to be included.')
 parser.add_argument('-o', metavar = 'OUTFILE_NAME', default = False, help = 'Name to give to the new, pruned table.')
-parser.add_argument('--make-both', action = 'store_true', default = False, help = 'Make both a binary and text output table. Default is text only.')
+parser.add_argument('-b', action = 'store_true', default = False, help = 'Make both a binary and text output table. Default is text only.')
 
 args = parser.parse_args()
 
@@ -25,17 +25,17 @@ args.pc_file.close()
 
 #open a text outfile
 if args.o == False:
-    out_name = args.t_file.name
+    out_name = args.t_file.name.split('.')[0] + '_pruned.txt'
 else:
     out_name = args.o
 outFile = open(out_name, 'w')
 #open a binary outfile if requested
-if args.make-both:
-    outFile2 = open(out_name, 'wb')
+if args.b:
+    outFile2 = open(out_name+'.bi', 'wb')
 
 # write the first line of names to the outfile
 outFile.write(t_lines[0])
-if args.make-both:
+if args.b:
     outFile2.write(t_lines[0])
 # for every other line
 for line in t_lines[1:]:
@@ -45,12 +45,12 @@ for line in t_lines[1:]:
     if cols[0] in clusters:
         # write the line to the outfile
         outFile.write(line)
-        # if make-both:
-        if args.make-both:
+        # if b:
+        if args.b:
             outFile2.write(line)
             # binary too
 
 # close everything up
 outFile.close()
-if make-both:
+if args.b:
     outFile2.close()
