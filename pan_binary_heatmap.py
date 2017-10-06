@@ -15,7 +15,7 @@ args = parser.parse_args()
 
 # which columns to read -- don't read first 2
 cols = []
-for x in arange(2, 46):
+for x in arange(1, 75):
     cols.append(x)
 
 # read the excel file
@@ -30,9 +30,10 @@ fig = plt.figure(figsize = (7,13))
 ax = fig.add_subplot(1,1,1)
 
 #ax.set_yticklabels(bins, fontsize = 8)
-ax.set_xticklabels(genes, fontsize = 8, rotation = 90)
+ax.set_xticklabels(bins, fontsize = 8, rotation = 90)
 sb.heatmap(data, cbar = False, vmin = 0, vmax = 1, ax = ax, xticklabels = True, yticklabels = True)
 plt.tight_layout(rect = [0.075,0,1,1])
+ax.set_yticklabels(genes, fontsize = 8)
 plt.yticks(rotation = 0, fontsize = 8)
 
 if not args.o:
@@ -46,7 +47,7 @@ plt.cla()
 if args.c:
     fig2 = plt.figure(figsize=(7,17))
     ax2 = fig2.add_subplot(1,1,1)
-    cg = sb.clustermap(data, figsize = (7,17),method = 'ward', metric = 'euclidean', cbar = False, vmin = 0, vmax = 1, xticklabels = True, yticklabels = True)
+    cg = sb.clustermap(data, figsize = (10,17),method = 'ward', metric = 'euclidean', cbar = False, vmin = 0, vmax = 1, xticklabels = True, yticklabels = genes)
     #plt.tight_layout(rect = [0.075,0,1,1])
     plt.setp(cg.ax_heatmap.yaxis.get_majorticklabels(), rotation=0, fontsize = 8)
     plt.setp(cg.ax_heatmap.xaxis.get_majorticklabels(), rotation=90, fontsize = 8)
