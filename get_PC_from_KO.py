@@ -35,13 +35,9 @@ for KO_line in KO_lines:
         # split the lines
         cols = line.split('\t')
         # if the KO column = KO
-        try:
-            if KO in cols[5]:
-                # add to list
-                PC_list.append(cols[1]+'\n')
-        except:
-            #print cols
-            pass
+        if KO in cols[5]:
+            # add to list
+            PC_list.append(cols[1]+'\n')
 
 # write to outfile w/o duplicates:
 for PC in set(PC_list):
