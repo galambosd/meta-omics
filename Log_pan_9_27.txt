@@ -62,3 +62,6 @@ The server is being terminated.
 // make the descriptions for Excel
 ~/pangenomics $ python ~/own_scripts/pan/heatmap_descriptor.py methane_module_KO_PC.txt MCR_all_good_bins_min2_fixed_protein_clusters_summary.txt methane_module_KO.txt 
 Some protein clusters are associated with more than 1 KO!
+
+// Excel fiddling, + pan_binary_heatmap.py 
+filenames: test_new.pdf, test_new_clustered.pdf
