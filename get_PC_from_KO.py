@@ -40,7 +40,8 @@ for KO_line in KO_lines:
             # add to list
                 PC_list.append(cols[1]+'\n')
         except:
-            print cols
+            #print cols
+            pass
 
 # write to outfile w/o duplicates:
 for PC in set(PC_list):
