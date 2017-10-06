@@ -37,7 +37,7 @@ for KO_line in KO_lines:
         # if the KO column = KO
         try:
             if KO in cols[5]:
-            # add to list
+                # add to list
                 PC_list.append(cols[1]+'\n')
         except:
             #print cols
