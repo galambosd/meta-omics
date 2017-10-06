@@ -50,3 +50,15 @@ GENOMES_min2_fixed/SUMMARY_dummy_collection/index.html
 Please wait...
 ===============================================
 The server is being terminated.
+
+// Making a list of protein clusters
+ ~/pangenomics $ python ~/own_scripts/pan/get_PC_from_KO.py methane_module_KO.txt MCR_all_good_bins_min2_fixed_protein_clusters_summary.txt 
+ 
+// prune the table
+~/pangenomics/MCR_good-GENOMES_min2_fixed $ python ~/own_scripts/pan/prune_presence_absence.py MCR_all_good_bins_min2_fixed_P-A.txt ../methane_module_KO_PC.txt 
+104 protein clusters
+
+
+// make the descriptions for Excel
+~/pangenomics $ python ~/own_scripts/pan/heatmap_descriptor.py methane_module_KO_PC.txt MCR_all_good_bins_min2_fixed_protein_clusters_summary.txt methane_module_KO.txt 
+Some protein clusters are associated with more than 1 KO!
