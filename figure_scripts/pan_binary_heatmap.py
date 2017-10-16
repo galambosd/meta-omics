@@ -7,18 +7,21 @@ from matplotlib.text import Text
 
 # parser
 parser = ap.ArgumentParser(description = 'A script to make a binary heatmap out of a presence-absence table.')
-parser.add_argument('XL', metavar = 'EXCEL_FILE', help = "Excel file that has a sheet 'table' with the table and a sheet 'descriptions' with the descriptions.")
-parser.add_argument('cols', metavar = 'BINS', type = int, help = 'Number of bins in excel file.')
+parser.add_argument('XL', metavar = 'EXCEL_FILE', help = "Excel file that has a sheet 'table' with the table.")
+parser.add_argument('cols', metavar = 'BINS', type = int, help = 'Number of bins to read from the Excel file.')
 parser.add_argument('-o', metavar = 'PLOT_FILE', default = False, help = 'Full file name for the *.pdf plot.')
 parser.add_argument('-r', action = 'store_true', default = False, help = 'Make a heatmap with hierarchically clustered rows.')
 parser.add_argument('-c', action = 'store_true', default = False, help = 'Make a heatmap with hierarchically clustered columns.')
+parser.add_argument('--size', default = (7,13), nargs = 2, type = int, metavar = ('x','y'), help = 'Size of the regular heatmap.')
+parser.add_argument('--size_clustered', default = (10,13), type = int, nargs = 2, metavar = ('x','y'), help = 'Size of the clusterd heatmap.')
+
 
 args = parser.parse_args()
 
 
 # which columns to read -- don't read first 2
 cols = []
-for x in arange(2, args.cols+2):
+for x in arange(2, (args.cols+3)):
     cols.append(x)
 
 # read the excel file
@@ -30,7 +33,7 @@ genes = descriptors['Gene name']
 bins = data.keys()[3:]
 
 # can change figure size over here
-fig = plt.figure(figsize = (7,13))
+fig = plt.figure(figsize = (args.size[0], args.size[1]))
 ax = fig.add_subplot(1,1,1)
 
 #ax.set_yticklabels(bins, fontsize = 8)
@@ -48,9 +51,9 @@ plt.clf()
 plt.cla()
 
 if args.c or args.r:
-    fig2 = plt.figure(figsize=(7,17))
+    fig2 = plt.figure(figsize=(10,13))
     ax2 = fig2.add_subplot(1,1,1)
-    cg = sb.clustermap(data, figsize = (7,17),method = 'ward', metric = 'euclidean', cbar = False, vmin = 0, vmax = 1, xticklabels = True, yticklabels = True, row_cluster = args.r, col_cluster = args.c)
+    cg = sb.clustermap(data, figsize = (args.size_clustered[0], args.size_clustered[1]),method = 'ward', metric = 'euclidean', cbar = False, vmin = 0, vmax = 1, xticklabels = True, yticklabels = True, row_cluster = args.r, col_cluster = args.c)
     #plt.tight_layout(rect = [0.075,0,1,1])
     plt.setp(cg.ax_heatmap.yaxis.get_majorticklabels(), rotation=0, fontsize = 8)
     plt.setp(cg.ax_heatmap.xaxis.get_majorticklabels(), rotation=90, fontsize = 8)
