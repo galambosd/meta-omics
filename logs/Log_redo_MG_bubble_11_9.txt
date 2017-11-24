@@ -249,4 +249,17 @@ eduroam-163-69:RNA-DNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ B
   warnings.warn("tight_layout : falling back to Agg renderer")
 
 
+vpn-sgateway-40-38:excel_files dgalambos$ python ../figure_scripts/pan_binary_heatmap.py pan_binary_heatmap_fixed_short_collapsed_KO.xlsx 42 -o short_collapsed_P-A.pdf -c 
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+vpn-sgateway-40-38:excel_files dgalambos$ cd ../heatmaps/
+vpn-sgateway-40-38:heatmaps dgalambos$ python ../figure_scripts/pan_binary_heatmap.py ../excel_files/pan_binary_heatmap_fixed_short_collapsed_KO.xlsx 42 -o short_collapsed_P-A.pdf -c --size 10 13 --size_clustered 13 13
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+vpn-sgateway-40-38:heatmaps dgalambos$ python ../figure_scripts/pan_binary_heatmap.py ../excel_files/pan_binary_heatmap_fixed_short_collapsed_KO.xlsx 42 -o short_collapsed_P-A_rowcluster.pdf -c --size 10 13 --size_clustered 13 13 -r
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+vpn-sgateway-40-38:heatmaps dgalambos$ 
+
+
 
