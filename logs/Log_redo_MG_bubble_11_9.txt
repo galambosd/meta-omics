@@ -223,3 +223,30 @@ RNA
 Done.
 
 
+eduroam-163-69:DNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot_mod.py -o MG_bubble_plot_new_norm.pdf D
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+eduroam-163-69:DNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot_mod.py -o MG_bubble_plot_new_norm.pdf D
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+eduroam-163-69:DNA dgalambos$ cd ../RNA/
+eduroam-163-69:RNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot_mod.py -o MT_bubble_plot_new_norm.pdf R
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+eduroam-163-69:RNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot.py -h
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+eduroam-163-69:RNA dgalambos$ cd ../DNA/
+eduroam-163-69:DNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot_mod.py -o MG_bubble_plot_new_norm.pdf D
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+eduroam-163-69:DNA dgalambos$ cd ../RNA-DNA/
+eduroam-163-69:RNA-DNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot_mod.py -o MG_bubble_plot_new_norm.pdf R:D
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+eduroam-163-69:RNA-DNA dgalambos$ python ~/Dropbox/Summer\ 2017/Scripts/MT-MG\ Bubble\ Plots/bubble_plot_mod.py -o MT-MG_bubble_plot_new_norm.pdf R:D
+/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
+  warnings.warn("tight_layout : falling back to Agg renderer")
+
+
+
