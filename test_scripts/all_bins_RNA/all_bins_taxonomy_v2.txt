@@ -1,0 +1,84 @@
+!FS842
+Bin_3	Thiotrichales_3
+Bin_4	Thermoprotei_4
+Bin_5	Thermoprotei_5
+!FS844
+Bin_10	Deltaproteobacteria NaphS2_10
+Bin_115	Caldilinea_115
+Bin_13	Sulfurovum_13
+Bin_16	Desulfobacterales_16
+Bin_20	Flavobacteriales_20
+Bin_37	Bacteroidetes_37
+Bin_41	Methanomicrobia_41
+Bin_43	Sulfurovum_43
+Bin_45	Methanomicrobia_45
+Bin_54	Nanohaloarchaea_54
+Bin_56	Thiotrichales_56
+Bin_74	Desulfobacterales_74
+Bin_78	Methanomicrobia_78
+Bin_84	Methanomicrobia_84
+!FS848
+Bin_13	Methanococci_13
+Bin_21	Thiotrichales_21
+!FS854
+Bin_10	Thiotrichales_10
+Bin_101	Other Campylobacterales_101
+Bin_110	Zetaproteobacteria_110
+Bin_13	Methanococci_13b
+Bin_2	Other Campylobacterales_2
+Bin_43	Thiotrichales_43
+Bin_60	Thiotrichales_60
+Bin_69b	Methanococci_69b
+Bin_7	Sulfurovum_7
+Bin_8	Archaeoglobi_8
+Bin_88	Nautiliales_88
+Bin_9	Sulfurovum_9
+Bin_99	Sulfurovum_99
+!FS856
+Bin_12	Other Campylobacterales_12
+Bin_14	Aquificales_14
+Bin_26	Archaeoglobi_26
+Bin_29	Desulfobacterales_29
+Bin_37	Sulfurovum_37
+Bin_7	Flavobacteriales_7
+!FS866
+Bin_14	Aquificales_14b
+Bin_20	Thermoprotei_20
+Bin_21	Aquificales_21
+Bin_23	Thermoprotei_23
+Bin_31	Sulfurovum_31
+Bin_4	Thermococci_4
+Bin_43	Nanoarchaeales_43
+Bin_7	Methanococci_7
+!FS872
+Bin_4	Clostridia_4
+Bin_8	Clostridia_8
+FS874
+Bin_3	Alteromonadales_3
+Bin_4	Pseudomonadales_4
+Bin_5	Sphingomonadales_5
+!FS877
+Bin_1	Pseudomonadales_1
+Bin_2	Sphingomonadales_2
+Bin_3	Alteromonadales_3b
+!FS879
+Bin_14	Aquificales_14c
+Bin_26	Desulfobacterales_26
+Bin_33	Thiotrichales_33
+Bin_34	Thiotrichales_34
+!FS881
+Bin_16	Thermoprotei_16
+Bin_18	Nanohaloarchaea_18
+Bin_21	Aquificales_21
+Bin_24	Aquificales_24
+Bin_27	Thiotrichales_27
+Bin_29	Thermoprotei_29
+Bin_3	Pseudomonadales_3
+Bin_32	Thermoprotei_32
+Bin_33	Aquificales_33
+Bin_4	Sphingomonadales_4
+Bin_40	Aquificales_40
+Bin_43	Sulfurovum_43b
+Bin_45	Sulfurovum_45
+Bin_5	Pseudomonadales_5
+Bin_50	Candidatus Caldiarchaeum_50
