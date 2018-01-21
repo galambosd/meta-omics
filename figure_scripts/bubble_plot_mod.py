@@ -68,12 +68,12 @@ plt.tight_layout(rect=[0,0.065,0.95,1]) #makes the layout match the dimensions a
 
 #Make a legend
 #Works, but very ugly and obscures legend title
-DNA_nums = [7.5, 75, 750, 3750]
+DNA_nums = [40, 400, 4000, 8000]
 RNA_nums = [10,100,1000,5000]
-vs_nums = [7*power(10.0,0), 7*power(10,1), 7*power(10,2), 7*power(10,3)]
-DNA_labels = ('5','1','0.1','0.01')
+vs_nums = [30,300, 3000, 6000]
+DNA_labels = ('20','10','1','0.1')
 RNA_labels = ('5e-04', '1e-04', '1e-05', '1e-06')
-vs_labels = ('1e-03', '1e-04', '1e-05', '1e-06')
+vs_labels = ('2e-03', '1e-03', '1e-04', '1e-05')
 
 axes = plt.gca()
 
