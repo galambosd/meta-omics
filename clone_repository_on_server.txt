@@ -5,6 +5,4 @@ Instructions for cloning an existing Git repository (that you may already have o
 3. Log on to the server as usual: ssh user@xx.xx.xx
 4. Clone your repository as usual: git clone <repository_url> (use the SSH URL you just got)
 5. Follow the instructions at https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux, including step 3 (adding an SSH key to your account). Make sure the tab at the top of the page has the correct OS selected (Baross runs Linux). 
-6. After this, you should be able to push and pull the repository from the server. If you created a passphrase while making your SSH key, the server may prompt you for it once in a while. 
-
-
+6. After this, you should be able to push and pull the repository from the server. If you created a passphrase while making your SSH key, the server may prompt you for it whenever you push/pull. 
