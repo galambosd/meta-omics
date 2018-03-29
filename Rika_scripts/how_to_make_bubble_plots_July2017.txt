@@ -1,0 +1,173 @@
+How to make bubble plots of functional genes in metagenomes or metatranscriptomes
+By Rika A., July 2017
+
+***NOTE!! Some of these scripts are likely to be buggy or may require some editing to match the names you assign your datasets.
+Just ask and I'll help fix it.
+
+
+1. MAP YOUR READS TO YOUR ASSEMBLIES. 
+	For metagenomes, map DNA reads to DNA assemblies.
+	For metatranscriptomes, map RNA reads to DNA assemblies.
+	I strongly recommend using the same naming conventions I use below, or the scripts might break.
+
+1A. For metagenomes, this has already been done. Copy over the bam files that i've already 
+	made for mapping, OR map reads to DNA assembly. make sure to convert to bam, sort and index.
+	They are all in this directory: /usr/local/data/Mid_Cayman_Rise_data/MCR_mappings
+	
+--or--
+
+1B. map the RNA reads against the DNA assembly. For example:
+	randerson@baross ~/testing_bubble_scripts $ bowtie2-build MidCaymanRise_FS881_idba_assembly_fixed.fa MidCaymanRise_FS881_idba_assembly_fixed.btindex
+	randerson@baross ~/testing_bubble_scripts $ bowtie2 -x MidCaymanRise_FS881_idba_assembly_fixed.btindex -f -p 50 -U MidCaymanRise_RNA_FS881_merged_filtered_rRNA_removed.fa -S FS881_RNA_reads_vs_MidCaymanRise_FS881_idba.sam
+	8856348 reads; of these:
+	  8856348 (100.00%) were unpaired; of these:
+		4058349 (45.82%) aligned 0 times
+		3668190 (41.42%) aligned exactly 1 time
+		1129809 (12.76%) aligned >1 times
+	54.18% overall alignment rate
+
+	(NOTE!! this command has you using 50 CPUs. check what's going on with "top" first to see how many CPUs are free. baross has 96 total.)
+
+	randerson@baross ~/testing_bubble_scripts $ samtools view -bs FS881_RNA_reads_vs_MidCaymanRise_FS881_idba.sam > FS881_RNA_reads_vs_MidCaymanRise_FS881_idba.bam
+	randerson@baross ~/testing_bubble_scripts $ samtools sort FS881_RNA_reads_vs_MidCaymanRise_FS881_idba.bam -o FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_sorted.bam
+	[bam_sort_core] merging from 7 files...
+	randerson@baross ~/testing_bubble_scripts $ samtools index FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_sorted.bam
+
+
+
+2. To calculate ORF coverage, first make a bed file from the gff file and map file. The bed 
+	file just lists every ORF coordinates, JGI name, and original contig name.
+	randerson@baross ~/testing_bubble_scripts $ python make_bed_file_from_gff_file.py 3300014848.a.gff 3300014848.a.map.txt
+
+
+
+3. Use samtools bedcov to get the raw, per-base coverage of each ORF.
+	randerson@baross ~/testing_bubble_scripts $ samtools bedcov 3300014848.a.bed FS881_reads_vs_MidCaymanRise_FS881_idba-init.bam > FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt
+	--or--
+	randerson@baross ~/testing_bubble_scripts $ samtools bedcov FS881/3300014848.a.bed FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_sorted.bam > FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt
+
+
+
+4. Calculate the coverage for each gene and annotate using KO, COG, or pfam.
+	randerson@baross ~/testing_bubble_scripts $ python calculate_gene_coverage_annotate_ko.py FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt 3300014848.a.ko.txt
+	randerson@baross ~/testing_bubble_scripts $ python calculate_gene_coverage_annotate_cog.py FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt 3300014848.a.cog.txt
+	randerson@baross ~/testing_bubble_scripts $ python calculate_gene_coverage_annotate_pfam.py FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt 3300014848.a.pfam.txt
+	-or-
+	randerson@baross ~/testing_bubble_scripts $ python calculate_gene_coverage_annotate_pfam.py FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt FS881/3300014848.a.ko.txt
+	randerson@baross ~/testing_bubble_scripts $ python calculate_gene_coverage_annotate_cog.py FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt FS881/3300014848.a.cog.txt
+	randerson@baross ~/testing_bubble_scripts $ python calculate_gene_coverage_annotate_pfam.py FS881_RNA_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage.txt FS881/3300014848.a.pfam.txt
+
+
+
+5. Calculate normalization factors.
+	This script will go through your usearch cog outputs (generated in the previous step) and
+	calculate the average number of hits to a set of single copy universal clusters of orthologous genes (COGs) for each metagenome.
+	We do this so that we can normalize the total number of hits to specific genes by a number that accounts for both the size of the metagenome
+	(some metagenomes were simply sequenced more deeply than others) as well as the fact that genomes have varying sizes.
+	You will need the list of single-copy cogs in the same folder where you run this script. It is called "list_of_single_copy_cogs.txt"
+
+	The program will spit out some numbers for you on the terminal. For each metagenome, it will report something that looks like this:
+	
+	randerson@baross ~/testing_bubble_scripts $ python get_normalization_factors.py
+	./FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage_calculated_and_annotated_COG.txt
+	Average coverage for all 35 single-copy cogs:
+	10409.8328434
+	
+	Use the number after "Average number of hits to single-copy cogs:" to create a list that 
+	has the metagenome name in one column and the average coverage for single-copy cogs in the other.
+	Be sure to use a tab to separate your columns.
+	It should look something like this. Save it as "normalization_factors.txt" and save it in the same directory as all of these scripts and files.
+	If you have RNA reads mapped, you would indicate that as seen below.
+	
+	FS841	2391.865
+	FS842	17024.975
+	FS844	13589.8532168
+	FS848	9392.74
+	FS849	1209.8543
+	FS851	9642.3456788
+	FS852	4157.7562
+	FS854	10673.567345
+	FS856	30849.3566
+	FS866	7365.701
+	FS872	7495.56836
+	FS874	14194.12432
+	FS877	21977.8368
+	FS879	4393.83215
+	FS881	30058.4210
+	FS881_RNA	915.787550732
+	
+
+
+
+6. Calculate average coverage for all key metabolic genes, normalized.
+
+	randerson@baross ~/testing_bubble_scripts $ python find_key_metab_genes_KO.py
+	./FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage_calculated_and_annotated_KO.txt
+	/usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:1110: RuntimeWarning: Mean of empty slice.
+	  avg = a.mean(axis)
+	/usr/lib64/python2.7/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+	  ret = ret.dtype.type(ret / rcount)
+  
+	  randerson@baross ~/testing_bubble_scripts $ python find_key_metab_genes_pfam.py
+	./FS881_reads_vs_MidCaymanRise_FS881_idba_ORF_coverage_calculated_and_annotated_pfam.txt
+	/usr/lib64/python2.7/site-packages/numpy/lib/function_base.py:1110: RuntimeWarning: Mean of empty slice.
+	  avg = a.mean(axis)
+	/usr/lib64/python2.7/site-packages/numpy/core/_methods.py:80: RuntimeWarning: invalid value encountered in double_scalars
+	  ret = ret.dtype.type(ret / rcount)
+  
+7. Put the data from these script outputs into Excel. I like to combine subunits (just by summing the various subunits together), 
+	and eliminate genes that I don't think are interesting.
+	Then create a sheet called "MG_bubble_plot" and format the data like this:
+	
+	x-axis (samples)	y-axis (genes)	size (RNADNA)	Sample name	Gene name	metabolism	color	size multiplier
+	1	1	0.012965286	Old Man Tree	ech	hydrogen	c	1.296528649
+	2	1	1.030607492	Old Man Tree	ech	hydrogen	c	103.0607492
+	3	1	0.03224859	Ravelin #2	ech	hydrogen	c	3.224859023
+	4	1	0.066303628	Shrimp Hole	ech	hydrogen	c	6.630362793
+	5	1	0.014809873	Shrimp Hole	ech	hydrogen	c	1.480987325
+	6	1	0.688564736	Ginger Castle	ech	hydrogen	c	68.85647359
+	7	1	0.011579818	Main Orifice	ech	hydrogen	c	1.157981803
+	8	1	0.679158181	SE side of Von Domm cone	ech	hydrogen	c	67.91581806
+	9	1	0	Twin Peaks	ech	hydrogen	c	0
+	10	1	0.286390317	Shrimp Buttery	ech	hydrogen	c	28.63903171
+	11	1	0.629182791	Hot Cracks #2	ech	hydrogen	c	62.91827908
+	12	1	0.006948766	Hot Chimlet, BVM	ech	hydrogen	c	0.694876582
+	13	1	0.004811162	Shrimp Canyon, BVM	ech	hydrogen	c	0.48111619
+	14	1	0.053312096	 Marker X-19 at BV #4, BVM	ech	hydrogen	c	5.331209594
+	15	1	0.282861681	Shrimp Gulley #2, BSM	ech	hydrogen	c	28.28616811
+	1	2	0	Old Man Tree	eha	hydrogen	c	0
+	2	2	0.530108457	Old Man Tree	eha	hydrogen	c	53.0108457
+	3	2	0.017857143	Ravelin #2	eha	hydrogen	c	1.785714286
+	4	2	0	Shrimp Hole	eha	hydrogen	c	0
+	5	2	0	Shrimp Hole	eha	hydrogen	c	0
+	6	2	0.553130324	Ginger Castle	eha	hydrogen	c	55.31303237
+	7	2	0	Main Orifice	eha	hydrogen	c	0
+	8	2	1.824304141	SE side of Von Domm cone	eha	hydrogen	c	182.4304141
+	9	2	0	Twin Peaks	eha	hydrogen	c	0
+	10	2	0.155162215	Shrimp Buttery	eha	hydrogen	c	15.5162215
+	11	2	0.060095607	Hot Cracks #2	eha	hydrogen	c	6.009560665
+	12	2	0.00425223	Hot Chimlet, BVM	eha	hydrogen	c	0.425222983
+	13	2	0.00120279	Shrimp Canyon, BVM	eha	hydrogen	c	0.120279047
+	14	2	0.055092289	 Marker X-19 at BV #4, BVM	eha	hydrogen	c	5.509228895
+	15	2	0.011021427	Shrimp Gulley #2, BSM	eha	hydrogen	c	1.102142695
+	
+	This shows the format for two genes (ech and eha), and I have 15 metagenomes.
+	The "size (RNADNA)" column corresponds to the number taken directly from the script outputs.
+	The "color" column matches legal matplotlib color abbreviations. For more info, see here: http://matplotlib.org/api/colors_api.html
+	The "size multiplier" column just multiplies the size by a certain number so that the bubbles aren't all teeny tiny or ginormous. Play with this until your bubbles are a reasonable size.
+	Save this Excel file as "calculations_for_bubble_plots.xlsx" and save it in the same directory as all of these files and scripts.
+	
+	
+8. at long last-- MAKE YOUR BUBBLE PLOTS!
+	It's simple. Run the command "bubble_plot.py"
+
+	Example:
+	rikander$ python bubble_plot.py
+
+	That's it. You will get a pdf called "MG_bubble_plot.pdf"
+	The bubbles will be ordered from left to right according to your metagenome number. So, metagenome #1 (Old Man Tree in the example above) will be on the far left.
+	The bubbles will be ordered from bottom to top according to the gene number. So, gene #1 (ech in the example above) will be on the bottom, and go up from there.
+	There are probably ways to format this to make it look prettier, but I didn't do that for this script.
+	Unless you are a matplotlib nerd and want to mess with the script yourself, I suggest importing the figure into Adobe Illustrator 
+	or your favorite graphics program and go to town. I like to add in the gene names, the metagenome names, color code according to metabolism, add outlines to the bubbles,
+	and add a scale legend (I have built a scale in to the example excel spreadsheet that I use as the basis of my legend).
