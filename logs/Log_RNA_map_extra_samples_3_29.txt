@@ -4717,7 +4717,7 @@ Building DifferenceCoverSample
 
 // convert old anvio contigs databases
 
-~/pangenomics/FS842 $ anvi-migrate-db CONTIGS.db 
+~/RNA_mapping/FS842 $ anvi-migrate-db CONTIGS.db 
 /usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
   from ._conv import register_converters as _register_converters
 Database Path ................................: CONTIGS.db
@@ -4736,6 +4736,1753 @@ Contigs found ................................: 8,998
                                                                                                                                                                                                             
 * The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
 and ever.
+
+~/RNA_mapping/FS866 $ anvi-migrate-db CONTIGS.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: CONTIGS.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                                                 
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: CONTIGS.h5
+Contigs found ................................: 26,523
+                                                                                                                                                                                                            
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+
+~/RNA_mapping/FS874 $ anvi-migrate-db CONTIGS.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: CONTIGS.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                                                 
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: CONTIGS.h5
+Contigs found ................................: 5,414
+                                                                                                                                                                                                            
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+~/RNA_mapping/FS877 $ anvi-migrate-db CONTIGS.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: CONTIGS.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                                                 
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: CONTIGS.h5
+Contigs found ................................: 6,239
+                                                                                                                                                                                                            
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+// profiling and merging the mapping data
+
+galambosd@baross ~/RNA_mapping $ ./anvi_profile_merge.sh FS842/ FS866/ FS874/ FS877/
+/Accounts/galambosd/RNA_mapping/FS842
+anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS844_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS844_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS844_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 27,614
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS848_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS848_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS848_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS848_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 93,262
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS851_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS851_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS851_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS851_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 64,050
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS852_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS852_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS852_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS852_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 55,345
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS854_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS854_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS854_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS854_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 3,738
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS856_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS856_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS856_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS856_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 15,940
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS872_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS872_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS872_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS872_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 29,960
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS879_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS879_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS879_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS879_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 151,563
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS881_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS842/FS881_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: e80c393e
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS842/FS881_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS842/FS881_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 2,723,081
+num_contigs ........................: 9,009
+num_contigs_after_M ................: 2,315
+num_splits .........................: 2,315
+total_length .......................: 12,856,341
+anvi-merge */PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning                                                                                                                       
+profiler_version .............................: 23
+output_dir ...................................: /Accounts/galambosd/RNA_mapping/FS842/SAMPLES-MERGED-RNA_v3
+sample_id ....................................: SAMPLES_MERGED_RNA_v3
+description ..................................: None
+profile_db ...................................: /Accounts/galambosd/RNA_mapping/FS842/SAMPLES-MERGED-RNA_v3/PROFILE.db
+merged .......................................: True
+contigs_db_hash ..............................: e80c393e
+num_runs_processed ...........................: 9
+merged_sample_ids ............................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS848_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS851_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS852_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS854_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS856_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS872_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS879_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED, FS881_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED
+total_reads_mapped ...........................: 27614, 93262, 64050, 55345, 3738, 15940, 29960, 151563, 2723081
+cmd_line .....................................: /usr/local/bin/anvi-merge FS844_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS848_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS851_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS852_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS854_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS856_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS872_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS879_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS881_RNA_reads_vs_MidCaymanRise_FS842_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning
+clustering_performed .........................: True
+
+WARNING
+===============================================
+Anvi'o just set the normalization values for each sample based on how many
+mapped reads they contained. This information will only be used to calculate the
+normalized coverage table. Here are those values:
+FS844_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.14,
+FS848_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.04,
+FS851_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.06,
+FS852_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.07,
+FS854_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 1.00,
+FS856_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.23,
+FS872_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.12,
+FS879_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.02,
+FS881_RNA_READS_VS_MIDCAYMANRISE_FS842_IDBA_SORTED: 0.00
+
+                                                                                                                                                                                                            
+WARNING
+===============================================
+AA frequencies were not profiled, these tables will be empty in the merged
+profile database.
+
+                                                                                                                                                                                                            
+* Anvi'o hierarchical clustering of contigs...
+
+New items order ..............................: "cov:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf-cov:euclidean:ward" (type newick) has been added to the database...                                                                                    
+                                                                                                                                                                                                            
+* Additional data and layer orders...
+
+Auxiliary Data ...............................: Found: /Accounts/galambosd/RNA_mapping/FS842/SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)                                                                 
+Profile Super ................................: Initialized with all 2315 splits: /Accounts/galambosd/RNA_mapping/FS842/SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+                                                                                                                                                                                                            
+New layer_orders data...
+===============================================
+Data key "std_coverage" ......................: Type: newick
+Data key "mean_coverage" .....................: Type: newick
+Data key "mean_coverage_Q2Q3" ................: Type: newick
+Data key "max_normalized_ratio" ..............: Type: newick
+Data key "relative_abundance" ................: Type: newick
+Data key "detection" .........................: Type: newick
+Data key "abundance" .........................: Type: newick
+Data key "variability" .......................: Type: newick
+
+New order data added to the db for layer_orders : std_coverage, mean_coverage, mean_coverage_Q2Q3, max_normalized_ratio, relative_abundance, detection, abundance, variability.
+
+New layers additional data...
+===============================================
+Data key "num_mapped_reads" ..................: Predicted type: int
+
+New data added to the db for your layers .....: num_mapped_reads.
+
+/Accounts/galambosd/RNA_mapping/FS866
+anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS844_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS844_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS844_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 346,732
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS848_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS848_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS848_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS848_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 2,480,942
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS851_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS851_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS851_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS851_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 310,629
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS852_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS852_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS852_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS852_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 1,133,221
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS854_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS854_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS854_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS854_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 76,155
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS856_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS856_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS856_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS856_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 445,966
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS872_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS872_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS872_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS872_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 641,100
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS879_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS879_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS879_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS879_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 3,292,110
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS881_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS866/FS881_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 86012819
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS866/FS881_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS866/FS881_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 4,944,376
+num_contigs ........................: 26,627
+num_contigs_after_M ................: 4,786
+num_splits .........................: 4,786
+total_length .......................: 23,915,948
+anvi-merge */PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning                                                                                                                       
+profiler_version .............................: 23
+output_dir ...................................: /Accounts/galambosd/RNA_mapping/FS866/SAMPLES-MERGED-RNA_v3
+sample_id ....................................: SAMPLES_MERGED_RNA_v3
+description ..................................: None
+profile_db ...................................: /Accounts/galambosd/RNA_mapping/FS866/SAMPLES-MERGED-RNA_v3/PROFILE.db
+merged .......................................: True
+contigs_db_hash ..............................: 86012819
+num_runs_processed ...........................: 9
+merged_sample_ids ............................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS848_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS851_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS852_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS854_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS856_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS872_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS879_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED, FS881_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED
+total_reads_mapped ...........................: 346732, 2480942, 310629, 1133221, 76155, 445966, 641100, 3292110, 4944376
+cmd_line .....................................: /usr/local/bin/anvi-merge FS844_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS848_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS851_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS852_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS854_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS856_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS872_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS879_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS881_RNA_reads_vs_MidCaymanRise_FS866_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning
+clustering_performed .........................: True
+
+WARNING
+===============================================
+Anvi'o just set the normalization values for each sample based on how many
+mapped reads they contained. This information will only be used to calculate the
+normalized coverage table. Here are those values:
+FS844_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.22,
+FS848_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.03,
+FS851_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.25,
+FS852_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.07,
+FS854_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 1.00,
+FS856_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.17,
+FS872_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.12,
+FS879_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.02,
+FS881_RNA_READS_VS_MIDCAYMANRISE_FS866_IDBA_SORTED: 0.02
+
+                                                                                                                                                                                                            
+WARNING
+===============================================
+AA frequencies were not profiled, these tables will be empty in the merged
+profile database.
+
+                                                                                                                                                                                                            
+* Anvi'o hierarchical clustering of contigs...
+
+New items order ..............................: "cov:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf-cov:euclidean:ward" (type newick) has been added to the database...                                                                                    
+                                                                                                                                                                                                            
+* Additional data and layer orders...
+
+Auxiliary Data ...............................: Found: /Accounts/galambosd/RNA_mapping/FS866/SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)                                                                 
+Profile Super ................................: Initialized with all 4786 splits: /Accounts/galambosd/RNA_mapping/FS866/SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+                                                                                                                                                                                                            
+New layer_orders data...
+===============================================
+Data key "std_coverage" ......................: Type: newick
+Data key "mean_coverage" .....................: Type: newick
+Data key "mean_coverage_Q2Q3" ................: Type: newick
+Data key "max_normalized_ratio" ..............: Type: newick
+Data key "relative_abundance" ................: Type: newick
+Data key "detection" .........................: Type: newick
+Data key "abundance" .........................: Type: newick
+Data key "variability" .......................: Type: newick
+
+New order data added to the db for layer_orders : std_coverage, mean_coverage, mean_coverage_Q2Q3, max_normalized_ratio, relative_abundance, detection, abundance, variability.
+
+New layers additional data...
+===============================================
+Data key "num_mapped_reads" ..................: Predicted type: int
+
+New data added to the db for your layers .....: num_mapped_reads.
+
+/Accounts/galambosd/RNA_mapping/FS874
+anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS844_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS844_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS844_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 2,949
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS848_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS848_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS848_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS848_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 1,984
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS851_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS851_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS851_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS851_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 167
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS852_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS852_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS852_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS852_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 100
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS854_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS854_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS854_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS854_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 20
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS856_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS856_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS856_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS856_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 135
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS872_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS872_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS872_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS872_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 86,942
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS879_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS879_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS879_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS879_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 17,930
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS881_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS874/FS881_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 04ad3c5a
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS874/FS881_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS874/FS881_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 10,472
+num_contigs ........................: 5,424
+num_contigs_after_M ................: 1,657
+num_splits .........................: 1,657
+total_length .......................: 12,258,663
+anvi-merge */PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning                                                                                                                       
+profiler_version .............................: 23
+output_dir ...................................: /Accounts/galambosd/RNA_mapping/FS874/SAMPLES-MERGED-RNA_v3
+sample_id ....................................: SAMPLES_MERGED_RNA_v3
+description ..................................: None
+profile_db ...................................: /Accounts/galambosd/RNA_mapping/FS874/SAMPLES-MERGED-RNA_v3/PROFILE.db
+merged .......................................: True
+contigs_db_hash ..............................: 04ad3c5a
+num_runs_processed ...........................: 9
+merged_sample_ids ............................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS848_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS851_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS852_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS854_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS856_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS872_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS879_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED, FS881_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED
+total_reads_mapped ...........................: 2949, 1984, 167, 100, 20, 135, 86942, 17930, 10472
+cmd_line .....................................: /usr/local/bin/anvi-merge FS844_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS848_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS851_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS852_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS854_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS856_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS872_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS879_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS881_RNA_reads_vs_MidCaymanRise_FS874_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning
+clustering_performed .........................: True
+
+WARNING
+===============================================
+Anvi'o just set the normalization values for each sample based on how many
+mapped reads they contained. This information will only be used to calculate the
+normalized coverage table. Here are those values:
+FS844_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.01,
+FS848_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.01,
+FS851_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.12,
+FS852_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.20,
+FS854_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 1.00,
+FS856_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.15,
+FS872_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.00,
+FS879_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.00,
+FS881_RNA_READS_VS_MIDCAYMANRISE_FS874_IDBA_SORTED: 0.00
+
+                                                                                                                                                                                                            
+WARNING
+===============================================
+AA frequencies were not profiled, these tables will be empty in the merged
+profile database.
+
+                                                                                                                                                                                                            
+* Anvi'o hierarchical clustering of contigs...
+
+New items order ..............................: "cov:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf-cov:euclidean:ward" (type newick) has been added to the database...                                                                                    
+                                                                                                                                                                                                            
+* Additional data and layer orders...
+
+Auxiliary Data ...............................: Found: /Accounts/galambosd/RNA_mapping/FS874/SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)                                                                 
+Profile Super ................................: Initialized with all 1657 splits: /Accounts/galambosd/RNA_mapping/FS874/SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+                                                                                                                                                                                                            
+WARNING
+===============================================
+While anvi'o was trying to generate clusterings of samples based on view data
+available in the merged profile, clustering of some of the essential data
+failed. It is likely not a very big deal, but you shall be the judge of it.
+Anvi'o now proceeds to store layers order information for those view items the
+clustering in fact worked. Here is the list of stuff that failed: 'abundance'
+
+                                                                                                                                                                                                            
+New layer_orders data...
+===============================================
+Data key "std_coverage" ......................: Type: newick
+Data key "mean_coverage" .....................: Type: newick
+Data key "mean_coverage_Q2Q3" ................: Type: newick
+Data key "max_normalized_ratio" ..............: Type: newick
+Data key "relative_abundance" ................: Type: newick
+Data key "detection" .........................: Type: newick
+Data key "variability" .......................: Type: newick
+
+New order data added to the db for layer_orders : std_coverage, mean_coverage, mean_coverage_Q2Q3, max_normalized_ratio, relative_abundance, detection, variability.
+
+New layers additional data...
+===============================================
+Data key "num_mapped_reads" ..................: Predicted type: int
+
+New data added to the db for your layers .....: num_mapped_reads.
+
+/Accounts/galambosd/RNA_mapping/FS877
+anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS844_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS844_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS844_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS844_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 270,641
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS848_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS848_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS848_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS848_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS848_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 1,648,288
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS851_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS851_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS851_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS851_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS851_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 96,733
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS852_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS852_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS852_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS852_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS852_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 397,500
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS854_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS854_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS854_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS854_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS854_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 43,765
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS856_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS856_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS856_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS856_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS856_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 179,450
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS872_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS872_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS872_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS872_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS872_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 550,038
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS879_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS879_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS879_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS879_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS879_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 2,447,043
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55                                                                                                                  
+Contigs DB .........................: Initialized: CONTIGS.db (v. 10)                                                                                                                                       
+                                                                                                                                                                                                            
+WARNING
+=====================================
+Amino acid linkmer frequencies will not be characterized for this profile.
+
+anvio ..............................: 4-master
+profiler_version ...................: 23
+sample_id ..........................: FS881_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+description ........................: None
+profile_db .........................: /Accounts/galambosd/RNA_mapping/FS877/FS881_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db
+contigs_db .........................: True
+contigs_db_hash ....................: 4528f023
+cmd_line ...........................: /usr/local/bin/anvi-profile -i FS881_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam -c CONTIGS.db -T 55
+merged .............................: False
+blank ..............................: False
+split_length .......................: 9,223,372,036,854,775,807
+min_contig_length ..................: 2,500
+min_mean_coverage ..................: 0
+clustering_performed ...............: False
+min_coverage_for_variability .......: 10
+skip_SNV_profiling .................: False
+profile_AA_frequencies .............: False
+report_variability_full ............: False
+
+WARNING
+=====================================
+Your minimum contig length is set to 2,500 base pairs. So anvi'o will not take
+into consideration anything below that. If you need to kill this an restart your
+analysis with another minimum contig length value, feel free to press CTRL+C.
+
+input_bam ..........................: /Accounts/galambosd/RNA_mapping/FS877/FS881_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam                                                                          
+output_dir .........................: /Accounts/galambosd/RNA_mapping/FS877/FS881_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE
+total_reads_mapped .................: 39,928
+num_contigs ........................: 6,259
+num_contigs_after_M ................: 1,580
+num_splits .........................: 1,580
+total_length .......................: 12,228,318
+anvi-merge */PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning                                                                                                                       
+profiler_version .............................: 23
+output_dir ...................................: /Accounts/galambosd/RNA_mapping/FS877/SAMPLES-MERGED-RNA_v3
+sample_id ....................................: SAMPLES_MERGED_RNA_v3
+description ..................................: None
+profile_db ...................................: /Accounts/galambosd/RNA_mapping/FS877/SAMPLES-MERGED-RNA_v3/PROFILE.db
+merged .......................................: True
+contigs_db_hash ..............................: 4528f023
+num_runs_processed ...........................: 9
+merged_sample_ids ............................: FS844_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS848_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS851_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS852_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS854_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS856_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS872_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS879_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED, FS881_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED
+total_reads_mapped ...........................: 270641, 1648288, 96733, 397500, 43765, 179450, 550038, 2447043, 39928
+cmd_line .....................................: /usr/local/bin/anvi-merge FS844_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS848_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS851_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS852_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS854_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS856_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS872_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS879_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db FS881_RNA_reads_vs_MidCaymanRise_FS877_idba_sorted.bam-ANVIO_PROFILE/PROFILE.db -o SAMPLES-MERGED-RNA_v3 -c CONTIGS.db --skip-concoct-binning
+clustering_performed .........................: True
+
+WARNING
+===============================================
+Anvi'o just set the normalization values for each sample based on how many
+mapped reads they contained. This information will only be used to calculate the
+normalized coverage table. Here are those values:
+FS844_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.15,
+FS848_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.02,
+FS851_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.41,
+FS852_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.10,
+FS854_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.91,
+FS856_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.22,
+FS872_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.07,
+FS879_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 0.02,
+FS881_RNA_READS_VS_MIDCAYMANRISE_FS877_IDBA_SORTED: 1.00
+
+                                                                                                                                                                                                            
+WARNING
+===============================================
+AA frequencies were not profiled, these tables will be empty in the merged
+profile database.
+
+                                                                                                                                                                                                            
+* Anvi'o hierarchical clustering of contigs...
+
+New items order ..............................: "cov:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf:euclidean:ward" (type newick) has been added to the database...                                                                                        
+New items order ..............................: "tnf-cov:euclidean:ward" (type newick) has been added to the database...                                                                                    
+                                                                                                                                                                                                            
+* Additional data and layer orders...
+
+Auxiliary Data ...............................: Found: /Accounts/galambosd/RNA_mapping/FS877/SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)                                                                 
+Profile Super ................................: Initialized with all 1580 splits: /Accounts/galambosd/RNA_mapping/FS877/SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+                                                                                                                                                                                                            
+New layer_orders data...
+===============================================
+Data key "std_coverage" ......................: Type: newick
+Data key "mean_coverage" .....................: Type: newick
+Data key "mean_coverage_Q2Q3" ................: Type: newick
+Data key "max_normalized_ratio" ..............: Type: newick
+Data key "relative_abundance" ................: Type: newick
+Data key "detection" .........................: Type: newick
+Data key "abundance" .........................: Type: newick
+Data key "variability" .......................: Type: newick
+
+New order data added to the db for layer_orders : std_coverage, mean_coverage, mean_coverage_Q2Q3, max_normalized_ratio, relative_abundance, detection, abundance, variability.
+
+New layers additional data...
+===============================================
+Data key "num_mapped_reads" ..................: Predicted type: int
+
+New data added to the db for your layers .....: num_mapped_reads.
+
+
+
 
 
 
