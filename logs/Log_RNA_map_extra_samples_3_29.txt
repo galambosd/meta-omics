@@ -6482,6 +6482,40 @@ Data key "num_mapped_reads" ..................: Predicted type: int
 New data added to the db for your layers .....: num_mapped_reads.
 
 
+// import the existing anvio bin collections
+
+~/RNA_mapping/FS842 $ anvi-import-collection ../../pangenomics/FS842/FS842_bin_collection.txt -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS842_bins
+Num contigs in the contigs database ..........: 9,009
+Num splits in the contigs database ...........: 9,009
+Num splits in the input file .................: 2,372
+Num bins the input file describes ............: 10
+Num splits both input file and the db has ....: 2,315
+Collections ..................................: The collection "FS842_bins" that describes 2,315 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
+
+~/RNA_mapping/FS866 $ anvi-import-collection ../../pangenomics/FS866/FS866_bin_collection.txt -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS866_bins_v232
+Num contigs in the contigs database ..........: 26,627
+Num splits in the contigs database ...........: 26,627
+Num splits in the input file .................: 4,807
+Num bins the input file describes ............: 35
+Num splits both input file and the db has ....: 4,785
+Collections ..................................: The collection "FS866_bins_v232" that describes 4,785 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
+
+~/RNA_mapping/FS874 $ anvi-import-collection ../../pangenomics/FS874/FS874_bin_collection.txt -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS874_bins_v232
+Num contigs in the contigs database ..........: 5,424
+Num splits in the contigs database ...........: 5,424
+Num splits in the input file .................: 1,772
+Num bins the input file describes ............: 5
+Num splits both input file and the db has ....: 1,657
+Collections ..................................: The collection "FS874_bins_v232" that describes 1,657 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
+
+~/RNA_mapping/FS877 $ anvi-import-collection ../../pangenomics/FS877/FS877_bin_collection.txt -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS877_bins_v232
+Num contigs in the contigs database ..........: 6,259
+Num splits in the contigs database ...........: 6,259
+Num splits in the input file .................: 1,673
+Num bins the input file describes ............: 6
+Num splits both input file and the db has ....: 1,580
+Collections ..................................: The collection "FS877_bins_v232" that describes 1,580 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
+
 
 
 
