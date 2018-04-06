@@ -6516,6 +6516,101 @@ Num bins the input file describes ............: 6
 Num splits both input file and the db has ....: 1,580
 Collections ..................................: The collection "FS877_bins_v232" that describes 1,580 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
 
+// upgraded profile database in FS844 (RNA_mapping directory)
+ANVIO_SAMPLES_DB=SKIP anvi-migrate-db PROFILE.db
+
+// upgraded contigs DB in FS844
+
+// refining Desulfobacterales Bin_74 (FS844)
+
+ ~/RNA_mapping/FS844 $ anvi-refine -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c MidCaymanRise_FS844_idba_assembly_contigs.db -C FS844_bins_RNA -b Bin_74
+Contigs DB ...................................: Initialized: MidCaymanRise_FS844_idba_assembly_contigs.db (v. 10)                              
+Interactive mode .............................: refine                                                                                         
+                                                                                                                                               
+WARNING
+===============================================
+ProfileSuperClass found a collection focus, which means it will be initialized
+using only the splits in the profile database that are affiliated with the
+collection FS844_bins_RNA and bins "Bin_74" it describes.
+
+Auxiliary Data ...............................: Found: SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)                                          
+Profile Super ................................: Initialized with 181 of 19984 splits: SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+Input directory ..............................: /Accounts/galambosd/RNA_mapping/FS844/SAMPLES-MERGED-RNA_v3                                    
+Collection ID ................................: FS844_bins_RNA
+Number of bins ...............................: 1
+Number of splits .............................: 181
+available_clusterings ........................: ['cov:euclidean:ward', 'tnf:euclidean:ward', 'tnf-cov:euclidean:ward']                         
+                                                                                                                                               
+* The server is now listening the port number "8081". When you are finished, press
+CTRL+C to terminate the server.
+
+* The newick order 'tnf-cov:euclidean:ward' has been requested
+* Completeness info has been requested for 126 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 126 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 55 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 178 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 178 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 168 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 139 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 180 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 180 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 139 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 180 splits in Bin_74_1                                                                              
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 180 splits in Bin_74_1
+* Completeness info has been requested for 139 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 139 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 172 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 150 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 161 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 172 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 172 splits in Bin_74_1
+* Completeness info has been requested for 166 splits in Bin_74_1
+* Completeness info has been requested for 172 splits in Bin_74_1
+* Completeness info has been requested for 166 splits in Bin_74_1
+* Completeness info has been requested for 152 splits in Bin_74_1
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 126 splits in Bin_74_1                                                                              
+* Completeness info has been requested for 181 splits in Bin_74_1
+* Completeness info has been requested for 126 splits in Bin_74_1
+                                                                                                                                               
+WARNING
+===============================================
+Previous entries for "FS844_bins_RNA" is being removed from "collections_info,
+collections_of_contigs, collections_of_splits, collections_bins_info"
+
+Collections ..................................: The collection "FS844_bins_RNA" that describes 19,894 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
+* "FS844_bins_RNA" collection is updated!
+                                                                                                                                               
+WARNING
+===============================================
+Previous entries for "FS844_bins_RNA" is being removed from "collections_info,
+collections_of_contigs, collections_of_splits, collections_bins_info"
+
+Collections ..................................: The collection "FS844_bins_RNA" that describes 19,894 splits has been successfully added to the database at "SAMPLES-MERGED-RNA_v3/PROFILE.db".
+* "FS844_bins_RNA" collection is updated!
+^C
+Please wait...
+===============================================
+The server is being terminated.
+
+
 
 
 
