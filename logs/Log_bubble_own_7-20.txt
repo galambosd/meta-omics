@@ -1,0 +1,1040 @@
+// trying to install pip
+
+Bubble Plots dgalambos$ python get-pip.py
+Collecting pip
+  Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
+    100% |████████████████████████████████| 1.3MB 852kB/s
+Collecting wheel
+  Downloading wheel-0.29.0-py2.py3-none-any.whl (66kB)
+    100% |████████████████████████████████| 71kB 4.6MB/s
+Installing collected packages: pip, wheel
+Exception:
+Traceback (most recent call last):
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/basecommand.py", line 215, in main
+    status = self.run(options, args)
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/commands/install.py", line 342, in run
+    prefix=options.prefix_path,
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/req/req_set.py", line 784, in install
+    **kwargs
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/req/req_install.py", line 851, in install
+    self.move_wheel_files(self.source_dir, root=root, prefix=prefix)
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/req/req_install.py", line 1064, in move_wheel_files
+    isolated=self.isolated,
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/wheel.py", line 345, in move_wheel_files
+    clobber(source, lib_dir, True)
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/wheel.py", line 316, in clobber
+    ensure_dir(destdir)
+  File "/var/folders/r7/by155mps5hl_mx2hrjmqdllm0000gn/T/tmpHkXU17/pip.zip/pip/utils/__init__.py", line 83, in ensure_dir
+    os.makedirs(path)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.py", line 157, in makedirs
+    mkdir(name, mode)
+OSError: [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/pip'
+eduroam-163-69:Bubble Plots dgalambos$ python get-pip.py --prefix=/usr/local/
+Collecting pip
+  Using cached pip-9.0.1-py2.py3-none-any.whl
+Collecting wheel
+  Using cached wheel-0.29.0-py2.py3-none-any.whl
+Installing collected packages: pip, wheel
+Successfully installed pip-9.0.1 wheel-0.29.0
+eduroam-163-69:Bubble Plots dgalambos$ man python
+eduroam-163-69:Bubble Plots dgalambos$ python --version
+Python 2.7.10
+
+// install homebrew
+eduroam-163-69:~ dgalambos$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+
+Press RETURN to continue or any other key to abort
+==> /usr/bin/sudo /bin/mkdir -p /Library/Caches/Homebrew
+Password:
+==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
+==> /usr/bin/sudo /usr/sbin/chown dgalambos /Library/Caches/Homebrew
+==> Downloading and installing Homebrew...
+remote: Counting objects: 676, done.
+remote: Compressing objects: 100% (342/342), done.
+remote: Total 676 (delta 531), reused 413 (delta 314), pack-reused 0
+Receiving objects: 100% (676/676), 152.71 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (531/531), completed with 282 local objects.
+From https://github.com/Homebrew/brew
+ + 93d4fdf...997260d master     -> origin/master  (forced update)
+ * [new tag]         1.2.1      -> 1.2.1
+ * [new tag]         1.2.2      -> 1.2.2
+ * [new tag]         1.2.3      -> 1.2.3
+ * [new tag]         1.2.4      -> 1.2.4
+HEAD is now at 997260d Merge pull request #2917 from ilovezfs/python-libexec-bin
+Updated 2 taps (homebrew/core, homebrew/science).
+==> Cleaning up /Library/Caches/Homebrew...
+==> Migrating /Library/Caches/Homebrew to /Users/dgalambos/Library/Caches/Homebrew...
+==> Deleting /Library/Caches/Homebrew...
+==> New Formulae
+allure                                   fsql                                     mono-libgdiplus
+angular-cli                              get_iplayer                              moodbar
+antlr4-cpp-runtime                       git-cinnabar                             mruby-cli
+apache-arrow                             gradle-completion                        neovim
+apache-ctakes                            grakn                                    openfortivpn
+asdf                                     haste-client                             overmind
+audacious                                homebrew/science/alien-hunter            packetq
+bartycrouch                              homebrew/science/cutadapt                percona-server-mongodb
+bdsup2sub                                homebrew/science/platypusvar             pilosa
+bitcoin                                  homebrew/science/yices                   pycodestyle
+chronograf                               iamy                                     r
+cockroach                                insect                                   redis@3.2
+cython                                   ipython                                  rustup-init
+dcm2niix                                 ipython@5                                tectonic
+dcos-cli                                 jhipster                                 tokei
+docker2aci                               jose                                     twine-pypi
+druid                                    kubectx                                  vips
+dwarf                                    libmypaint                               warp
+erlang@19                                libnice                                  wpscan
+faas-cli                                 libopusenc                               zeromq@4.1
+fd                                       mariadb@10.1                             zork
+freedink                                 maven@3.0
+==> Updated Formulae
+aalib                                    homebrew/science/analysis                mysqltuner
+abcl                                     homebrew/science/andi                    n
+advancemame                              homebrew/science/anvio ✔                 nagios
+aescrypt-packetizer                      homebrew/science/apophenia               nano
+afflib                                   homebrew/science/arb                     nativefier
+afl-fuzz                                 homebrew/science/armadillo               nats-streaming-server
+algernon                                 homebrew/science/arpack                  ncmpc
+amazon-ecs-cli                           homebrew/science/art                     ncmpcpp
+ammonite-repl                            homebrew/science/bamm                    ndpi
+amqp-cpp                                 homebrew/science/bayestraits             ne
+angband                                  homebrew/science/bcftools                neo4j
+ansible                                  homebrew/science/beast2                  neofetch
+ansible-cmdb                             homebrew/science/blast ✔                 netpbm
+ansifilter                               homebrew/science/bowtie                  nghttp2
+ansiweather                              homebrew/science/bowtie2                 nginx
+ant@1.9                                  homebrew/science/bpipe                   nifi
+antigen                                  homebrew/science/calculix-ccx            nim
+apache-archiva                           homebrew/science/cd-hit                  nmap
+apache-brooklyn-cli                      homebrew/science/cdo                     nnn
+apache-flink                             homebrew/science/cgns                    node
+apache-geode                             homebrew/science/clfft                   node-build
+apache-spark                             homebrew/science/clinfo                  node@4
+apache-zeppelin                          homebrew/science/clonehd                 node@6
+apktool                                  homebrew/science/cmdstan                 nodeenv
+app-engine-go-64                         homebrew/science/cmor                    nodenv
+app-engine-java                          homebrew/science/coinmp                  noti
+appscale-tools                           homebrew/science/dealii                  notmuch
+apr                                      homebrew/science/dextractor              npth
+apr-util                                 homebrew/science/diamond ✔               nspr
+arangodb                                 homebrew/science/dwgsim                  nss
+archi-steam-farm                         homebrew/science/dynare                  ntl
+aria2                                    homebrew/science/ea-utils                ntopng
+armor                                    homebrew/science/enblend-enfuse          numpy ✔
+arping                                   homebrew/science/etsf_io                 nzbget
+artifactory                              homebrew/science/express                 ocaml
+ascii                                    homebrew/science/fgsl                    ocamlbuild
+assimp                                   homebrew/science/field3d                 ocamlsdl
+at-spi2-atk                              homebrew/science/freebayes               ode
+at-spi2-core                             homebrew/science/freec                   offlineimap
+aubio                                    homebrew/science/getdp                   ola
+aurora                                   homebrew/science/glpk                    one-ml
+aurora-cli                               homebrew/science/gmsh                    oniguruma
+automake                                 homebrew/science/gmt                     onscripter
+awf                                      homebrew/science/gmt4                    opam
+aws-sdk-cpp                              homebrew/science/gnuastro                open-mpi
+awscli                                   homebrew/science/gnudatalanguage         open-scene-graph
+azure-cli                                homebrew/science/gromacs                 openal-soft
+babl                                     homebrew/science/h5utils                 opencoarrays
+bacula-fd                                homebrew/science/hdf5@1.8                opencore-amr
+bandcamp-dl                              homebrew/science/hotspot                 openh264
+baresip                                  homebrew/science/htslib                  openldap
+basex                                    homebrew/science/hypre                   openrct2
+bash-completion@2                        homebrew/science/igv                     openrtsp
+bash-preexec                             homebrew/science/igvtools                openshift-cli
+bastet                                   homebrew/science/insighttoolkit          openssl ✔
+bazel                                    homebrew/science/iqtree                  openssl@1.1
+bear                                     homebrew/science/kaiju                   openttd
+bee                                      homebrew/science/kallisto                openvpn
+berkeley-db                              homebrew/science/kat                     opus
+bibtex2html                              homebrew/science/lastz                   orientdb
+binaryen                                 homebrew/science/libbi                   osc
+bind                                     homebrew/science/libccd                  oscats
+bit                                      homebrew/science/libmatio                osquery
+bitlbee                                  homebrew/science/libminc                 osrm-backend
+bitrise                                  homebrew/science/libsbol                 owfs
+blackbox                                 homebrew/science/libsequence             oysttyer
+blockhash                                homebrew/science/libsigrokdecode         p11-kit
+bluepill                                 homebrew/science/littler                 pachi
+bmake                                    homebrew/science/lmod                    packer
+bmon                                     homebrew/science/mad-x                   packetbeat
+bro                                      homebrew/science/mash                    paket
+buildifier                               homebrew/science/mathgl                  pandoc-citeproc
+buku                                     homebrew/science/matplotlib              pango
+byacc                                    homebrew/science/mbsystem                par2
+byobu                                    homebrew/science/med-file                parallel
+c-ares                                   homebrew/science/meme                    pari
+caddy                                    homebrew/science/mir-prefer              passenger
+cairo                                    homebrew/science/moab                    pcap_dnsproxy
+cake                                     homebrew/science/moose                   pcre ✔
+calc                                     homebrew/science/mummer                  pcre2
+camlp4                                   homebrew/science/mumps                   pcsc-lite
+camlp5                                   homebrew/science/nanopolish              pdf-redact-tools
+capnp                                    homebrew/science/nccmp                   pdf2htmlex
+cargo-completion                         homebrew/science/nco                     pdf2json
+carthage                                 homebrew/science/ncview                  pdftoedn
+certbot                                  homebrew/science/netcdf                  pdns
+certigo                                  homebrew/science/nextflow                pdnsrec
+cfengine                                 homebrew/science/nexusformat             pegtl
+chakra                                   homebrew/science/nixio                   percona-server
+checkstyle                               homebrew/science/numdiff                 percona-toolkit
+chkrootkit                               homebrew/science/nxtrim                  percona-xtrabackup
+chromedriver                             homebrew/science/octave                  perl
+cimg                                     homebrew/science/opencollada             perl-build
+citus                                    homebrew/science/openfst                 pgcli
+cjdns                                    homebrew/science/opengrm-ngram           pgloader
+ckan                                     homebrew/science/opengrm-thrax           pgpdump
+clang-format                             homebrew/science/openimageio             pgplot
+closure-compiler                         homebrew/science/openmeeg                phoronix-test-suite
+closure-stylesheets                      homebrew/science/orthofinder             pick
+clutter                                  homebrew/science/oswitch                 pike
+cmake                                    homebrew/science/packmol                 pioneer
+cmark-gfm                                homebrew/science/parallel-netcdf         pixman
+cmocka                                   homebrew/science/paraview                planck
+cnats                                    homebrew/science/pcb                     plantuml
+coccinelle                               homebrew/science/pcl                     platformio
+codec2                                   homebrew/science/petsc                   pmd
+coffeescript                             homebrew/science/pillow                  pngquant
+collectd                                 homebrew/science/poretools               poco
+collector-sidecar                        homebrew/science/pulseview               ponscripter-sekai
+colordiff                                homebrew/science/qrupdate                ponyc
+commandbox                               homebrew/science/rainbow                 poppler
+compcert                                 homebrew/science/rapsearch2              portmidi
+compose2kube                             homebrew/science/raxml                   postgresql
+conan                                    homebrew/science/root                    postgresql@9.4
+confuse                                  homebrew/science/root6                   postgresql@9.5
+consul                                   homebrew/science/samtools                postgrest
+consul-backinator                        homebrew/science/scalapack               ppsspp
+consul-template                          homebrew/science/scram                   pqiv
+convmv                                   homebrew/science/seqdb                   pre-commit
+convox                                   homebrew/science/sigrok-cli              prest
+coq                                      homebrew/science/silo                    presto
+corebird                                 homebrew/science/siril                   prometheus
+couchdb                                  homebrew/science/slepc                   protobuf
+cppcheck                                 homebrew/science/slicot                  protobuf-swift
+creduce                                  homebrew/science/snid                    psqlodbc
+cromwell                                 homebrew/science/snoscan                 purescript
+crowdin                                  homebrew/science/spades                  pushpin
+crystal-lang                             homebrew/science/sratoolkit              putty
+csmith                                   homebrew/science/sumo                    pv
+cspice                                   homebrew/science/superlu43               pwntools
+ctop                                     homebrew/science/swetest                 pyenv
+curl                                     homebrew/science/swrcfit                 pyexiv2
+dar                                      homebrew/science/tamarin-prover          pygobject
+datomic                                  homebrew/science/therion                 pygobject3
+davix                                    homebrew/science/topcat                  pyinvoke
+davmail                                  homebrew/science/tophat                  pypy
+dbhash                                   homebrew/science/trinity                 pypy3
+dbt                                      homebrew/science/vcfanno                 pyqt
+dbus                                     homebrew/science/vigra                   python
+dbxml                                    homebrew/science/visp                    python3 ✔
+dcd                                      homebrew/science/vtk                     qbs
+debianutils                              homebrew/science/wiggletools             qcachegrind
+deis                                     homebrew/science/wxmaxima                qscintilla2
+dependency-check                         homebrew/science/xmgredit                qt
+dfix                                     homebrew/science/xmi-msim                quantlib
+dfmt                                     homebrew/science/yaggo                   rabbitmq
+dhall-json                               httpflow                                 radare2
+di                                       httrack                                  rancher-cli
+dialog                                   huexpress                                rbenv
+dieharder                                hugo                                     rbenv-bundler-ruby-version
+diff-pdf                                 hyper                                    rbenv-ctags
+diff-so-fancy                            hyperscan                                re2
+diffoscope                               i2p                                      reattach-to-user-namespace
+diffutils                                i3status                                 rebar@3
+digdag                                   ibex                                     recoverjpeg
+direnv                                   ideviceinstaller                         redis
+django-completion                        imagemagick                              redis-leveldb
+dmd                                      imagemagick@6                            redpen
+dmenu                                    imageworsener                            remarshal
+dmtx-utils                               imake                                    rex
+dnscrypt-wrapper                         immortal                                 rgbds
+dnsmasq                                  infer                                    riemann
+dnsviz                                   influxdb                                 riemann-client
+docker                                   influxdb@0.8                             ripgrep
+docker-cloud                             inspircd                                 rkflashtool
+docker-compose                           instead                                  rkhunter
+docker-compose-completion                ios-sim                                  rmlint
+docker-credential-helper                 ipbt                                     rocksdb
+docker-machine                           iperf3                                   rom-tools
+docker-machine-completion                ipfs                                     roswell
+docker-machine-driver-vultr              ipmitool                                 rpm
+docker-machine-driver-xhyve              ipv6calc                                 rrdtool
+doctl                                    irssi                                    rswift
+docutils                                 isync                                    rtags
+dos2unix                                 jags                                     rtv
+dosbox                                   jansson                                  ruby-build
+dosbox-x                                 jasper                                   rust
+dovecot                                  jbig2dec                                 s3cmd
+dpkg                                     jboss-forge                              s3fs
+dropbear                                 jemalloc                                 s6
+dub                                      jenkins                                  saldl
+duck                                     jenkins-lts                              saltstack
+easyrpg-player                           jetty                                    sane-backends
+ebook-tools                              jetty-runner                             sassc
+ecl                                      jfrog-cli-go                             saxon
+efl                                      jlog                                     sbcl
+eigen                                    jmeter                                   sbtenv
+ejabberd                                 jo                                       scala@2.11
+elasticsearch                            joe                                      scalaenv
+elixir                                   jruby                                    scalariform
+elixirscript                             jsdoc3                                   scamper
+elvish                                   jsoncpp                                  scipy ✔
+enigma                                   jsonnet                                  screen
+erlang                                   jsonschema2pojo                          scw
+etcd                                     juise                                    sdl2_mixer
+ettercap                                 juju                                     sdl_mixer
+exa                                      juju@1.25                                sdl_sound
+exercism                                 jvgrep                                   securefs
+exiftool                                 jython                                   serveit
+exim                                     kafka                                    servus
+exiv2                                    kafkacat                                 sfcgal
+expat                                    kapacitor                                shadowsocks-libev
+exploitdb                                kerl                                     shc
+faac                                     khal                                     shellshare
+fabio                                    kibana                                   shfmt
+fabric                                   kitchen-sync                             sip
+fades                                    knot                                     sjk
+feedgnuplot                              knot-resolver                            skinny
+feh                                      kobalt                                   sleuthkit
+fetch-crl                                kompose                                  smali
+ffmpeg                                   kops                                     smlnj
+fibjs                                    kotlin                                   snappy
+ficy                                     kube-aws                                 snappystream
+file-formula                             kubernetes-cli                           snapraid
+filebeat                                 kubernetes-helm                          sngrep
+fio                                      lablgtk                                  snzip
+firebase-cli                             languagetool                             solr
+fish                                     lapack                                   sonar-scanner
+fits                                     lastpass-cli                             source-to-image
+flatbuffers                              latex2rtf                                sourcekitten
+flatcc                                   latexila                                 sourcery
+fleetctl                                 ldc                                      sparkey
+flint-checker                            lean-cli                                 sphinx-doc
+flow                                     leaps                                    sqldiff
+flowgrind                                ledit                                    sqlite ✔
+fluent-bit                               lego                                     sqlite-analyzer
+fmt                                      leptonica                                sqlmap
+fobis                                    leveldb                                  squid
+folly                                    lfe                                      srtp
+fontconfig                               lftp                                     sshuttle
+fontforge                                libaacs                                  sslscan
+fonttools                                libarchive                               sslyze
+fop                                      libass                                   ssreflect
+format-udf                               libatomic_ops                            st
+freeciv                                  libbluray                                statik
+freeimage                                libcouchbase                             stern
+freeipmi                                 libdap                                   stlink
+freeradius-server                        libepoxy                                 storm
+freetds                                  libextractor                             streamlink
+freetype                                 libfabric                                strongswan
+frei0r                                   libgcrypt                                stunnel
+fuse-emulator                            libgit2                                  subversion
+fuse-zip                                 libgit2-glib                             supertux
+fuseki                                   libgosu                                  supervisor
+fwup                                     libgphoto2                               suricata
+fzf                                      libgweather                              svgcleaner
+galen                                    libhttpseverywhere                       svtplay-dl
+gammaray                                 libimobiledevice                         swagger-codegen
+gammu                                    liblcf                                   swi-prolog
+ganglia                                  libmagic                                 swiftformat
+gauge                                    libmaxminddb                             swiftgen
+gcc@4.6                                  libmemcached                             swiftlint
+gcc@4.7                                  libmicrohttpd                            swiftplate
+gcc@6                                    libmikmod                                swimat
+gdb                                      libmwaw                                  syncthing
+gdk-pixbuf                               libnfs                                   syncthing-inotify
+gearman                                  liboping                                 sysbench
+geckodriver                              libphonenumber                           sysdig
+gedit                                    libplist                                 tarantool
+geeqie                                   libpng ✔                                 tbb
+gegl                                     libproxy                                 tcpreplay
+generate-json-schema                     libqalculate                             tcptraceroute
+geoip                                    libraw                                   tee-clc
+geoipupdate                              librdkafka                               telegraf
+geoserver                                libre                                    teleport
+getdns                                   librem                                   terminal-notifier
+getmail                                  libressl                                 termius
+gexiv2                                   librsvg                                  terraform
+gflags                                   libsass                                  terragrunt
+ghi                                      libslax                                  tesseract
+ghostscript                              libsodium                                testssl
+gifsicle                                 libsoup                                  texinfo
+gimme                                    libspectrum                              texmath
+gist                                     libtasn1                                 tfenv
+git                                      libtensorflow                            the_silver_searcher
+git-annex                                libtermkey                               thefuck
+git-extras                               libtiff                                  tiger-vnc
+git-flow-avh                             libuninameslist                          tinyxml2
+git-fresh                                libupnp                                  tippecanoe
+git-ftp                                  libuv                                    tldr
+git-lfs                                  libvidstab                               tmux
+git-town                                 libvirt                                  tnef
+gitbucket                                libxml2                                  todolist
+giter8                                   libzip                                   tomcat
+gitfs                                    libzzip                                  tor
+gitg                                     lincity-ng                               traildb
+github-markdown-toc                      linkerd                                  translate-shell
+gitlab-ci-multi-runner                   llnode                                   translate-toolkit
+gitless                                  llvm                                     treefrog
+gjs                                      lmdb                                     tth
+gkrellm                                  logrotate                                ttyd
+glib                                     logstash                                 twarc
+glibmm                                   logtalk                                  typescript
+global                                   lolcat                                   udunits
+glog                                     lsdvd                                    ufoai
+gmic                                     lumo                                     unbound
+gmime                                    luvit                                    uncrustify
+gnatsd                                   lxc                                      unison
+gnome-builder                            lynis                                    unison@2.40
+gnome-recipes                            macvim                                   unrar
+gnu-typist                               magic-wormhole                           upx
+gnumeric                                 make                                     urbit
+gnupg                                    makensis                                 urh
+gnupg-pkcs11-scd                         makepkg                                  v8@3.15
+gnuradio                                 mame                                     vagrant-completion
+gnutls                                   mapcrafter                               vala
+go                                       mapserver                                valgrind
+go@1.7                                   mariadb                                  vamp-plugin-sdk
+gobject-introspection                    mariadb@10.0                             vapoursynth
+godep                                    masscan                                  varnish
+goenv                                    mat                                      varnish@4
+gofabric8                                mcabber                                  vault
+goffice                                  media-info                               vdirsyncer
+golo                                     mediaconch                               vert.x
+goofys                                   mednafen                                 vice
+googler                                  memcached                                vifm
+gor                                      menhir                                   vim
+gperftools                               mercurial                                vim@7.4
+gphoto2                                  meson                                    vnu
+gradle                                   mesos                                    vte3
+grafana                                  metabase                                 wakatime-cli
+grails                                   metricbeat                               wartremover
+grails@2.5                               mftrace                                  watchexec
+graphicsmagick                           mgba                                     webpack
+grc                                      micro                                    weechat
+grep                                     micropython                              wesnoth
+groonga                                  mikmod                                   wget
+groovy                                   mikutter                                 whois
+grpc                                     miller                                   wine
+gsl ✔                                    minetest                                 winetricks
+gsmartcontrol                            mingw-w64                                wiredtiger
+gspell                                   minicom                                  wireguard-tools
+gst-editing-services                     minidlna                                 wireshark
+gst-libav                                minimal-racket                           wpcli-completion
+gst-plugins-bad                          minio                                    wtf
+gst-plugins-base                         minio-mc                                 wxmac
+gst-plugins-good                         minisat                                  x265
+gst-plugins-ugly                         miniupnpc                                xctool
+gst-python                               minizinc                                 xdot
+gst-rtsp-server                          mkvtoolnix                               xmake
+gst-validate                             mldonkey                                 xmount
+gstreamer                                mockserver                               xonsh
+gtk+3                                    moco                                     xrootd
+gtk-vnc                                  moe                                      xsv
+gtkmm3                                   monax                                    yadm
+gtksourceview3                           monetdb                                  yank
+gucharmap                                mongo-c-driver                           yara
+gws                                      mongo-cxx-driver                         yarn
+gx                                       mongodb                                  yash
+gx-go                                    mongoose                                 yasm
+h2                                       monit                                    yaws
+halibut                                  mono                                     yaz
+haproxy                                  mosquitto                                ykneomgr
+harfbuzz                                 mp3blaster                               ykpers
+haxe                                     mpd                                      yle-dl
+hbase                                    mpdas                                    you-get
+heimdal                                  mpg123                                   youtube-dl
+heroku                                   mps-youtube                              yubico-piv-tool
+hevea                                    mpv                                      zabbix
+hg-fast-export                           mruby                                    zanata-client
+highlight                                msgpack                                  zbar
+hive                                     mtr                                      zero-install
+hledger                                  mutt                                     zookeeper
+homebank                                 mvtools                                  zsh
+homebrew/science/abinit                  mycli                                    zsh-autosuggestions
+homebrew/science/adapterremoval          mypy                                     zsh-completions
+homebrew/science/alpscore                mysql-connector-c++                      zstd
+homebrew/science/ampl-mp                 mysql-sandbox                            zurl
+==> Renamed Formulae
+homebrew/science/samtools-0.1 -> homebrew/science/samtools@0.1
+osh -> etsh
+speedtest_cli -> speedtest-cli
+==> Deleted Formulae
+autotrace      dvtm           kibana@4.1     libtess2       node@0.10      node@0.12      snescom        xplanetfx
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate user behaviour analytics.
+Read the analytics documentation (and how to opt-out) here:
+  http://docs.brew.sh/Analytics.html
+
+==> Next steps:
+- Run `brew help` to get started
+- Further documentation:
+    http://docs.brew.sh
+
+// try to install matplotlib
+
+dgalambos$ pip install matplotlib
+Traceback (most recent call last):
+  File "/usr/local/bin/pip", line 7, in <module>
+    from pip import main
+ImportError: No module named pip
+eduroam-163-69:~ dgalambos$ pip3 install matplotlib
+Collecting matplotlib
+  Downloadinmatplotlib-2.0.2-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macx_10_10_x86_64.whl (12.8MB)
+    100% |████████████████████████████████| 12.8MB 107kB/s
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=1.5.6 (from matplotlib)
+  Downloading pyparsing-2.2.0-py2.py3-none-any.whl (56kB)
+    100% |████████████████████████████████| 61kB 4.1MB/s
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.10.0-py2.py3-none-any.whl
+Collecting pytz (from matplotlib)
+  Downloading pytz-2017.2-py2.py3-none-any.whl (484kB)
+    100% |████████████████████████████████| 491kB 2.4MB/s
+Collecting six>=1.10 (from matplotlib)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Collecting python-dateutil (from matplotlib)
+  Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+    100% |████████████████████████████████| 194kB 5.1MB/s
+Requirement already satisfied: numpy>=1.7.1 in /usr/local/lib/python3.6/site-packages (from matplotlib)
+Installing collected packages: pyparsing, six, cycler, pytz, python-dateutil, matplotlib
+Successfully installed cycler-0.10.0 matplotlib-2.0.2 pyparsing-2.2.0 python-dateutil-2.6.1 pytz-2017.2 six-1.10.0
+
+// trying to install pip
+
+dgalambos$ curl -O https://bootstrap.pypa.io/get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1558k  100 1558k    0     0  4508k      0 --:--:-- --:--:-- --:--:-- 4515k
+eduroam-163-69:~ dgalambos$ python3 get-pip.py
+Requirement already up-to-date: pip in /usr/local/lib/python3.6/site-packages
+eduroam-163-69:~ dgalambos$ pip install matplotlib
+Traceback (most recent call last):
+  File "/usr/local/bin/pip", line 7, in <module>
+    from pip import main
+ImportError: No module named pip
+eduroam-163-69:~ dgalambos$ pip3 install matplotlib
+Collecting matplotlib
+  Downloading matplotlib-2.0.2-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (12.8MB)
+    100% |████████████████████████████████| 12.8MB 107kB/s
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=1.5.6 (from matplotlib)
+  Downloading pyparsing-2.2.0-py2.py3-none-any.whl (56kB)
+    100% |████████████████████████████████| 61kB 4.1MB/s
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.10.0-py2.py3-none-any.whl
+Collecting pytz (from matplotlib)
+  Downloading pytz-2017.2-py2.py3-none-any.whl (484kB)
+    100% |████████████████████████████████| 491kB 2.4MB/s
+Collecting six>=1.10 (from matplotlib)
+  Downloading six-1.10.0-py2.py3-none-any.whl
+Collecting python-dateutil (from matplotlib)
+  Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+    100% |████████████████████████████████| 194kB 5.1MB/s
+Requirement already satisfied: numpy>=1.7.1 in /usr/local/lib/python3.6/site-packages (from matplotlib)
+Installing collected packages: pyparsing, six, cycler, pytz, python-dateutil, matplotlib
+Successfully installed cycler-0.10.0 matplotlib-2.0.2 pyparsing-2.2.0 python-dateutil-2.6.1 pytz-2017.2 six-1.10.0
+
+// trying to install pandas
+eduroam-163-69:~ dgalambos$ pip3 install pandas
+Collecting pandas
+  Downloading pandas-0.20.3-cp36-cp36m-macosx_10_12_x86_64.whl (9.3MB)
+    100% |████████████████████████████████| 9.3MB 147kB/s
+Requirement already satisfied: pytz>=2011k in /usr/local/lib/python3.6/site-packages (from pandas)
+Requirement already satisfied: numpy>=1.7.0 in /usr/local/lib/python3.6/site-packages (from pandas)
+Requirement already satisfied: python-dateutil>=2 in /usr/local/lib/python3.6/site-packages (from pandas)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.6/site-packages (from python-dateutil>=2->pandas)
+Installing collected packages: pandas
+Successfully installed pandas-0.20.3
+eduroam-163-69:~ dgalambos$ brew list
+anvio		gcc		hdf5		libmpc		muscle		prodigal	sqlite
+blast		gdbm		hmmer		libpng		numpy		python3		swig
+boost		gmp		isl		mcl		openssl		readline	szip
+diamond		gsl		jpeg		mpfr		pcre		scipy		xz
+eduroam-163-69:~ dgalambos$ python3.4 -c 'import matplotlib; print(matplotlib.__version__, matplotlib.__file__)'
+-bash: python3.4: command not found
+eduroam-163-69:~ dgalambos$ cd Documents/Research/Bubble\ Plots/
+eduroam-163-69:Bubble Plots dgalambos$ ls
+bubble_plot.py				example_bubble.pdf			how_to_make_bubble_plots_July2017.txt
+calculations_for_bubble_plots.xlsx	get-pip.py
+eduroam-163-69:Bubble Plots dgalambos$ python bubble_plot.py
+Traceback (most recent call last):
+  File "bubble_plot.py", line 2, in <module>
+    import pandas as pd
+ImportError: No module named pandas
+eduroam-163-69:Bubble Plots dgalambos$ python2.7 -c 'import matplotlib; print matplotlib.__version__, matplotlib.__file__'
+1.3.1 /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/__init__.pyc
+eduroam-163-69:Bubble Plots dgalambos$ pip install pandas
+Traceback (most recent call last):
+  File "/usr/local/bin/pip", line 7, in <module>
+    from pip import main
+ImportError: No module named pip
+eduroam-163-69:Bubble Plots dgalambos$ python
+Python 2.7.10 (default, Feb  6 2017, 23:53:20)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named pandas
+>>> eit()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'eit' is not defined
+>>> exit()
+eduroam-163-69:Bubble Plots dgalambos$ brew help
+Example usage:
+  brew search [TEXT|/REGEX/]
+  brew (info|home|options) [FORMULA...]
+  brew install FORMULA...
+  brew update
+  brew upgrade [FORMULA...]
+  brew uninstall FORMULA...
+  brew list [FORMULA...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install -vd FORMULA
+
+Developers:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+  http://docs.brew.sh/Formula-Cookbook.html
+
+Further help:
+  man brew
+  brew help [COMMAND]
+  brew home
+eduroam-163-69:Bubble Plots dgalambos$ brew update
+Already up-to-date.
+eduroam-163-69:Bubble Plots dgalambos$ cd ~
+
+// uninstall homebrew
+eduroam-163-69:~ dgalambos$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+Warning: This script will remove:
+/Users/dgalambos/Library/Caches/Homebrew/
+/Users/dgalambos/Library/Logs/Homebrew/
+/usr/local/Cellar/
+/usr/local/Homebrew/
+/usr/local/Homebrew/.github/
+/usr/local/Homebrew/.gitignore
+/usr/local/Homebrew/.travis.yml
+/usr/local/Homebrew/.yardopts
+/usr/local/Homebrew/CODEOFCONDUCT.md
+/usr/local/Homebrew/CONTRIBUTING.md
+/usr/local/Homebrew/LICENSE.txt
+/usr/local/Homebrew/Library/
+/usr/local/Homebrew/Library/Homebrew/test/.bundle/
+/usr/local/Homebrew/README.md
+/usr/local/Homebrew/bin/brew
+/usr/local/Homebrew/completions/
+/usr/local/Homebrew/docs/
+/usr/local/Homebrew/manpages/
+/usr/local/bin/brew -> /usr/local/Homebrew/bin/brew
+/usr/local/etc/bash_completion.d/brew -> /usr/local/Homebrew/completions/bash/brew
+/usr/local/share/doc/homebrew -> /usr/local/Homebrew/docs
+/usr/local/share/man/man1/brew-cask.1 -> /usr/local/Homebrew/manpages/brew-cask.1
+/usr/local/share/man/man1/brew.1 -> /usr/local/Homebrew/manpages/brew.1
+/usr/local/share/zsh/site-functions/_brew -> /usr/local/Homebrew/completions/zsh/_brew
+/usr/local/share/zsh/site-functions/_brew_cask -> /usr/local/Homebrew/completions/zsh/_brew_cask
+/usr/local/var/homebrew/locks/update
+Are you sure you want to uninstall Homebrew? [y/N] y
+==> Removing Homebrew installation...
+==> Removing empty directories...
+==> /usr/bin/sudo /usr/bin/find /usr/local/Cellar /usr/local/Homebrew /usr/local/Frameworks /usr/local/bin /usr/local/etc /usr/local/include /usr/local/lib /usr/local/opt /usr/local/sbin /usr/local/share /usr/local/var -name .DS_Store -delete
+Password:
+==> /usr/bin/sudo /usr/bin/find /usr/local/Cellar /usr/local/Homebrew /usr/local/Frameworks /usr/local/bin /usr/local/etc /usr/local/include /usr/local/lib /usr/local/opt /usr/local/sbin /usr/local/share /usr/local/var -depth -type d -empty -exec rmdir {} ;
+==> Homebrew uninstalled!
+The following possible Homebrew files were not deleted:
+/usr/local/bin/
+/usr/local/etc/
+/usr/local/lib/
+/usr/local/remotedesktop/
+/usr/local/share/
+/usr/local/texlive/
+/usr/local/var/
+You may wish to remove them yourself.
+eduroam-163-69:~ dgalambos$ which
+usage: which [-as] program ...
+eduroam-163-69:~ dgalambos$ which python 2.7
+/usr/bin/python
+eduroam-163-69:~ dgalambos$ which python 3.4
+/usr/bin/python
+eduroam-163-69:~ dgalambos$ python
+
+// installed latest python3 from python.org
+Python 2.7.10 (default, Feb  6 2017, 23:53:20)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+KeyboardInterrupt
+>>> exit()
+eduroam-163-69:~ dgalambos$ python3
+Python 3.6.2 (v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06)
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print "Hello"
+  File "<stdin>", line 1
+    print "Hello"
+                ^
+SyntaxError: Missing parentheses in call to 'print'
+>>> exit()
+eduroam-163-69:~ dgalambos$ pip install -U pip setuptools
+Traceback (most recent call last):
+  File "/usr/local/bin/pip", line 7, in <module>
+    from pip import main
+ImportError: No module named pip
+
+// trying to install pip again
+eduroam-163-69:~ dgalambos$ easy_install pip
+error: can't create or remove files in install directory
+
+The following error occurred while trying to add or remove files in the
+installation directory:
+
+    [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/test-easy-install-27101.pth'
+
+The installation directory you specified (via --install-dir, --prefix, or
+the distutils default setting) was:
+
+    /Library/Python/2.7/site-packages/
+
+Perhaps your account does not have write access to this directory?  If the
+installation directory is a system-owned directory, you may need to sign in
+as the administrator or "root" account.  If you do not have administrative
+access to this machine, you may wish to choose a different installation
+directory, preferably one that is listed in your PYTHONPATH environment
+variable.
+
+For information on other options, you may wish to consult the
+documentation at:
+
+  https://pythonhosted.org/setuptools/easy_install.html
+
+Please make the appropriate changes for your system and try again.
+
+
+// but I have pip3 already
+eduroam-163-69:~ dgalambos$ pip3
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be used up to 3 times (corresponding to
+                              WARNING, ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host as trusted, even though it does not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file containing the private key and the
+                              certificate in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine whether a new version of pip is available for
+                              download. Implied with --no-index.
+eduroam-163-69:~ dgalambos$
+
+// upgrade pip3
+eduroam-163-69:~ dgalambos$ pip3 install -U pip setuptools
+Requirement already up-to-date: pip in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+Collecting setuptools
+  Downloading setuptools-36.2.0-py2.py3-none-any.whl (477kB)
+    100% |████████████████████████████████| 481kB 1.7MB/s
+Installing collected packages: setuptools
+  Found existing installation: setuptools 28.8.0
+    Uninstalling setuptools-28.8.0:
+      Successfully uninstalled setuptools-28.8.0
+Successfully installed setuptools-36.2.0
+eduroam-163-69:~ dgalambos$ pip
+Traceback (most recent call last):
+  File "/usr/local/bin/pip", line 7, in <module>
+    from pip import main
+ImportError: No module named pip
+eduroam-163-69:~ dgalambos$ pip3
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be used up to 3 times (corresponding to
+                              WARNING, ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host as trusted, even though it does not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file containing the private key and the
+                              certificate in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine whether a new version of pip is available for
+                              download. Implied with --no-index.
+
+// trying to install pandas
+
+eduroam-163-69:~ dgalambos$ pip3 install pandas
+Collecting pandas
+  Using cached pandas-0.20.3-cp36-cp36m-macosx_10_12_x86_64.whl
+Collecting numpy>=1.7.0 (from pandas)
+  Downloading numpy-1.13.1-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl (4.5MB)
+    100% |████████████████████████████████| 4.6MB 305kB/s
+Collecting pytz>=2011k (from pandas)
+  Using cached pytz-2017.2-py2.py3-none-any.whl
+Collecting python-dateutil>=2 (from pandas)
+  Using cached python_dateutil-2.6.1-py2.py3-none-any.whl
+Collecting six>=1.5 (from python-dateutil>=2->pandas)
+  Using cached six-1.10.0-py2.py3-none-any.whl
+Installing collected packages: numpy, pytz, six, python-dateutil, pandas
+Successfully installed numpy-1.13.1 pandas-0.20.3 python-dateutil-2.6.1 pytz-2017.2 six-1.10.0
+
+// trying to install matplotlib
+
+eduroam-163-69:~ dgalambos$ pip3 install matplotlib
+Collecting matplotlib
+  Using cached matplotlib-2.0.2-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl
+Requirement already satisfied: pytz in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from matplotlib)
+Collecting cycler>=0.10 (from matplotlib)
+  Using cached cycler-0.10.0-py2.py3-none-any.whl
+Requirement already satisfied: numpy>=1.7.1 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from matplotlib)
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=1.5.6 (from matplotlib)
+  Using cached pyparsing-2.2.0-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.10 in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from matplotlib)
+Requirement already satisfied: python-dateutil in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (from matplotlib)
+Installing collected packages: cycler, pyparsing, matplotlib
+Successfully installed cycler-0.10.0 matplotlib-2.0.2 pyparsing-2.2.0
+eduroam-163-69:~ dgalambos$ cd Documents/Research/Bubble\ Plots/
+eduroam-163-69:Bubble Plots dgalambos$ ls
+bubble_plot.py				example_bubble.pdf			how_to_make_bubble_plots_July2017.txt
+calculations_for_bubble_plots.xlsx	get-pip.py
+
+// even when running w/ python3, error
+
+eduroam-163-69:Bubble Plots dgalambos$ python3 bubble_plot.py
+Traceback (most recent call last):
+  File "bubble_plot.py", line 3, in <module>
+    data=pd.read_excel("calculations_for_bubble_plots.xlsx", "MG_bubble_plot")
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/io/excel.py", line 203, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/io/excel.py", line 232, in __init__
+    import xlrd  # throw an ImportError if we need to
+ModuleNotFoundError: No module named 'xlrd'
+
+eduroam-163-69:Bubble Plots dgalambos$ python bubble_plot.py
+Traceback (most recent call last):
+  File "bubble_plot.py", line 2, in <module>
+    import pandas as pd
+ImportError: No module named pandas
+
+// install xlrd
+dgalambos$ pip3 install xlrd
+Collecting xlrd
+  Downloading xlrd-1.0.0-py3-none-any.whl (143kB)
+    100% |████████████████████████████████| 153kB 2.6MB/s
+Installing collected packages: xlrd
+Successfully installed xlrd-1.0.0
+
+
+// got it this time
+
+Bubble Plots dgalambos$ python3 bubble_plot.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 2442, in get_loc
+    return self._engine.get_loc(key)
+  File "pandas/_libs/index.pyx", line 132, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5280)
+  File "pandas/_libs/index.pyx", line 154, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5126)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1210, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20523)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1218, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20477)
+KeyError: 'x-axis (samples)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bubble_plot.py", line 7, in <module>
+    ax.scatter(data['x-axis (samples)'],data['y-axis (genes)'], s=data['size multiplier'], c=data['color']) # Third variable is size of the bubble
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/frame.py", line 1964, in __getitem__
+    return self._getitem_column(key)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/frame.py", line 1971, in _getitem_column
+    return self._get_item_cache(key)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/generic.py", line 1645, in _get_item_cache
+    values = self._data.get(item)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/internals.py", line 3590, in get
+    loc = self.items.get_loc(item)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 2444, in get_loc
+    return self._engine.get_loc(self._maybe_cast_indexer(key))
+  File "pandas/_libs/index.pyx", line 132, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5280)
+  File "pandas/_libs/index.pyx", line 154, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5126)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1210, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20523)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1218, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20477)
+KeyError: 'x-axis (samples)'
+
+
+// Is this key supposed to have a space between x-axis and samples or nah? Tried putting the space back in:
+Bubble Plots dgalambos$ ls
+bubble_plot.py				example_bubble.pdf			how_to_make_bubble_plots_July2017.txt
+calculations_for_bubble_plots.xlsx	get-pip.py
+eduroam-163-69:Bubble Plots dgalambos$ python3 bubble_plot.py
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 2442, in get_loc
+    return self._engine.get_loc(key)
+  File "pandas/_libs/index.pyx", line 132, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5280)
+  File "pandas/_libs/index.pyx", line 154, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5126)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1210, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20523)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1218, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20477)
+KeyError: 'x-axis (samples)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bubble_plot.py", line 7, in <module>
+    ax.scatter(data['x-axis (samples)'],data['y-axis (genes)'], s=data['size multiplier'], c=data['color']) # Third variable is size of the bubble
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/frame.py", line 1964, in __getitem__
+    return self._getitem_column(key)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/frame.py", line 1971, in _getitem_column
+    return self._get_item_cache(key)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/generic.py", line 1645, in _get_item_cache
+    values = self._data.get(item)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/internals.py", line 3590, in get
+    loc = self.items.get_loc(item)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/indexes/base.py", line 2444, in get_loc
+    return self._engine.get_loc(self._maybe_cast_indexer(key))
+  File "pandas/_libs/index.pyx", line 132, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5280)
+  File "pandas/_libs/index.pyx", line 154, in pandas._libs.index.IndexEngine.get_loc (pandas/_libs/index.c:5126)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1210, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20523)
+  File "pandas/_libs/hashtable_class_helper.pxi", line 1218, in pandas._libs.hashtable.PyObjectHashTable.get_item (pandas/_libs/hashtable.c:20477)
+KeyError: 'x-axis (samples)'
+
+// Tried it again:
+Bubble Plots dgalambos$ python3 bubble_plot.py
+
+// WORKED!!!
+
+// Running a couple times to get size right
+
+Bubble Plots dgalambos$ python3 bubble_plot.py
+Bubble Plots dgalambos$ python3 bubble_plot.py
+
+
+// After better-sorted data:
+DNA dgalambos$ python3 bubble_plot.py
+
+
+// size mult change to 470
+DNA dgalambos$ python3 bubble_plot.py
+
+// prep
+
+~/bubble_plots $ python ../own_scripts/combine_gene_names.py
+['sulfide:quinone oxidoreductase (sqr)', 'sulfur-oxidizing protein Sox (soxABCYZ)', 'sulfate adenylyltransferase (sat, met3)', 'sulfite reductase (dsrAB)', '2-oxoglutarate / 2-oxoacid ferredoxin oxidoreductase (korABCD, oorABCD)', 'fumarate reductase (frdAB)', 'ATP-citrate lyase (aclAB)', 'carbon-monoxide dehydrogenase (cooCFS, acsA)', 'cytochrome c oxidase cbb3-type (ccoNOPQ_NO)', 'cytochrome c oxidase (coxABCD,AC, ctaF)', 'nitrite reductase (cytochrome c-552) (nrfA)', 'nitric oxide reductase (norB)', 'nitrite reductase (NO-forming) / hydroxylamine reductase (nirKS)', 'nitrous-oxide reductase (nosZ)', 'methanol dehydrogenase (cytochrome c) (mxaF)', 'methane/ammonia monooxygenase (pmoA-amoA)', '[NiFe] hydrogenase (hydA2A3B2B3)', 'hydrogenase (hyaABC, hybO, hybC)', 'coenzyme F420 hydrogenase (frhABDG)', 'energy-converting hydrogenase B (ehbABFIJKLNO)', 'energy-converting hydrogenase A (ehaBCEGNOP)', 'ech hydrogenase (echABCE)', 'siderophore biosynthesis (IucA_IucC)', 'iron transport protein (FeoA)', 'iron transport protein (FeoB_C,N)', 'TonB-dependent Fe acquisition (Plug)', 'siderophore biosynthesis (Condensation)']
+
+// Trying to fit plot to smaller rect
+
+DNA dgalambos$ python3 ../bubble_plot_mod.py
+Traceback (most recent call last):
+  File "../bubble_plot_mod.py", line 31, in <module>
+    ax = fig.add_subplot(1,1,1, xticklabels = [samples], yticklabels = [genes], frame_on = False)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 1006, in add_subplot
+    ax = self._axstack.get(key)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 91, in get
+    item = dict(self._elements).get(key)
+TypeError: unhashable type: 'list'
+eduroam-163-69:DNA dgalambos$ python3 ../bubble_plot_mod.py
+Traceback (most recent call last):
+  File "../bubble_plot_mod.py", line 35, in <module>
+    plt.tight_layout(rect=(0.25,0.2,0.8,1)) #makes the layout match the dimensions and leaves room for text/caption
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/pyplot.py", line 1406, in tight_layout
+    fig.tight_layout(pad=pad, h_pad=h_pad, w_pad=w_pad, rect=rect)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 1755, in tight_layout
+    self.subplots_adjust(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 1620, in subplots_adjust
+    self.subplotpars.update(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 228, in update
+    raise ValueError('left cannot be >= right')
+ValueError: left cannot be >= right
+eduroam-163-69:DNA dgalambos$ python3 ../bubble_plot_mod.py
+Traceback (most recent call last):
+  File "../bubble_plot_mod.py", line 35, in <module>
+    plt.tight_layout(rect=(0.25,0.2,1,1)) #makes the layout match the dimensions and leaves room for text/caption
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/pyplot.py", line 1406, in tight_layout
+    fig.tight_layout(pad=pad, h_pad=h_pad, w_pad=w_pad, rect=rect)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 1755, in tight_layout
+    self.subplots_adjust(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 1620, in subplots_adjust
+    self.subplotpars.update(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/matplotlib/figure.py", line 228, in update
+    raise ValueError('left cannot be >= right')
+ValueError: left cannot be >= right
+
+
+// Redo parse_coverage_annotated to get mcr gene in there
+
+~/bubble_plots/test_parser $ python ../../own_scripts/parse_coverage_annotated_v2.py
+
+
+// Run bubble_plot_mod.py
+DNA dgalambos$ python3 ../bubble_plot_mod.py
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+biolfast63714:DNA dgalambos$ python3 ../bubble_plot_mod.py
+['Hot Chimlet', 'Shrimp Canyon', 'Shrimp Gulley #2', 'X-19 at BV #4', 'Main Orifice', 'near Main Orifice', 'Old Man Tree (2013)', 'Shrimp Buttery', 'Shrimp Hole (2012)', 'Shrimp Hole (2013)', 'Twin Peaks']
+biolfast63714:DNA dgalambos$ python3 ../bubble_plot_mod.py
+biolfast63714:DNA dgalambos$ cd ../Rn
+-bash: cd: ../Rn: No such file or directory
+biolfast63714:DNA dgalambos$ cd ../RNA/
+biolfast63714:RNA dgalambos$ ls
+bubble_plot.py				calculations_for_bubble_plots.xlsx
+bubble_prep_RNA.xlsx			~$calculations_for_bubble_plots.xlsx
+biolfast63714:RNA dgalambos$ python3 ../bubble_plot_mod.py
+
+etc etc etc ran that script over and over again, tweaking size mulitpliers/script for the legend
