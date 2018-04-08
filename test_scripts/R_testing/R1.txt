@@ -1,0 +1,4 @@
+	A	B	C
+1	g	h	a
+2	n	h	i
+5	u	i	w

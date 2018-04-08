@@ -1,0 +1,65 @@
+// summarizing all the extra bins
+
+~/file_org/mapping_data/RNA_mapping/FS842 $ anvi-summarize -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS842_bins -o SUMMARY_FS842_bins_RNA
+Contigs DB ...................................: Initialized: CONTIGS.db (v. 10)                                                                                                                
+
+WARNING
+===============================================
+ProfileSuperClass found a collection focus, which means it will be initialized
+using only the splits in the profile database that are affiliated with the
+collection FS842_bins and all bins it describes.
+
+Auxiliary Data ...............................: Found: SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)                                                                                          
+Profile Super ................................: Initialized with all 2315 splits: SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+Taxonomy .....................................: Initiated for taxonomic level for "t_genus"                                                                                                    
+                                                                                                                                                                                               
+HTML Output ..................................: /Accounts/galambosd/file_org/mapping_data/RNA_mapping/FS842/SUMMARY_FS842_bins_RNA/index.html
+
+~/file_org/mapping_data/RNA_mapping/FS866 $ anvi-summarize -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS866_bins_v232 -o SAMPLES-MERGED-RNA_v3/SUMMARY_FS866_bins_RNA
+Contigs DB ...................................: Initialized: CONTIGS.db (v. 10)
+
+WARNING
+===============================================
+ProfileSuperClass found a collection focus, which means it will be initialized
+using only the splits in the profile database that are affiliated with the
+collection FS866_bins_v232 and all bins it describes.
+
+Auxiliary Data ...............................: Found: SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)
+Profile Super ................................: Initialized with 4785 of 4786 splits: SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+Taxonomy .....................................: Initiated for taxonomic level for "t_genus"
+
+HTML Output ..................................: /Accounts/galambosd/file_org/mapping_data/RNA_mapping/FS866/SAMPLES-MERGED-RNA_v3/SUMMARY_FS866_bins_RNA/index.html
+
+
+
+~/file_org/mapping_data/RNA_mapping/FS874 $ anvi-summarize -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS874_bins_v232 -o SAMPLES-MERGED-RNA_v3/SUMMARY_FS874_bins_RNA
+Contigs DB ...................................: Initialized: CONTIGS.db (v. 10)
+
+WARNING
+===============================================
+ProfileSuperClass found a collection focus, which means it will be initialized
+using only the splits in the profile database that are affiliated with the
+collection FS874_bins_v232 and all bins it describes.
+
+Auxiliary Data ...............................: Found: SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)
+Profile Super ................................: Initialized with all 1657 splits: SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+Taxonomy .....................................: Initiated for taxonomic level for "t_genus"
+
+HTML Output ..................................: /Accounts/galambosd/file_org/mapping_data/RNA_mapping/FS874/SAMPLES-MERGED-RNA_v3/SUMMARY_FS874_bins_RNA/index.html
+
+
+
+~/file_org/mapping_data/RNA_mapping/FS877 $ anvi-summarize -p SAMPLES-MERGED-RNA_v3/PROFILE.db -c CONTIGS.db -C FS877_bins_v232 -o SAMPLES-MERGED-RNA_v3/SUMMARY_FS877_bins_RNA
+Contigs DB ...................................: Initialized: CONTIGS.db (v. 10)
+
+WARNING
+===============================================
+ProfileSuperClass found a collection focus, which means it will be initialized
+using only the splits in the profile database that are affiliated with the
+collection FS877_bins_v232 and all bins it describes.
+
+Auxiliary Data ...............................: Found: SAMPLES-MERGED-RNA_v3/AUXILIARY-DATA.db (v. 2)
+Profile Super ................................: Initialized with all 1580 splits: SAMPLES-MERGED-RNA_v3/PROFILE.db (v. 23)
+Taxonomy .....................................: Initiated for taxonomic level for "t_genus"
+
+HTML Output ..................................: /Accounts/galambosd/file_org/mapping_data/RNA_mapping/FS877/SAMPLES-MERGED-RNA_v3/SUMMARY_FS877_bins_RNA/index.html
