@@ -1,3 +1,7 @@
+!FS842
+Bin_3	Thiotrichales_3
+Bin_4	Thermoprotei_4
+Bin_5	Thermoprotei_5
 !FS844
 Bin_10	Deltaproteobacteria NaphS2_10
 Bin_115	Caldilinea_115
@@ -36,10 +40,27 @@ Bin_14	Aquificales_14
 Bin_26	Archaeoglobi_26
 Bin_29	Desulfobacterales_29
 Bin_37	Sulfurovum_37
-Bin_7	Flavobacteriales_7
+Bin_7 Flavobacteriales_7
+!FS866
+Bin_14  Aquificales_14d
+Bin_21  Aquificales_21b
+Bin_23  Thermoprotei_23
+Bin_20  Thermoprotei_20
+Bin_7 Methanococci_7
+Bin_4 Thermococci_4
+Bin_31  Sulfurovum_31
+Bin_43  Nanoarchaeales_43
 !FS872
 Bin_4	Clostridia_4
 Bin_8	Clostridia_8
+!FS874
+Bin_5 Sphingomonadales_5
+Bin_3 Alteromonadales_3
+Bin_4 Pseudomonadales_4
+!FS877
+Bin_2 Sphingomonadales_2
+Bin_3 Alteromonadales_3b
+Bin_1 Pseudomonadales_1
 !FS879
 Bin_14	Aquificales_14c
 Bin_26	Desulfobacterales_26
