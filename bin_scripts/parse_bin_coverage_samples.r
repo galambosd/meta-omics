@@ -36,37 +36,51 @@ sNameFrame <- read.delim(args$sample_names, header=FALSE)
 sNames <- sNameFrame[,2]
 names(sNames)<- sNameFrame[,1]
 
-# nameBins<-function(x){
-#  return binNames[[x]]
-# }
-#
-# nameSample <- function(x){
-#  return SNames[[x]]
-# }
+nameBins<-function(x){
+ return(binNames[[x]])
+}
+
+nameSample <- function(x){
+ return(sNames[[x]])
+}
+
+
 
 # find each mean covg file
 myFiles <- list.files(pattern="*mean_coverage.txt")
 # for each one..
 for (file in myFiles) {
   #open it
+  print(file)
   current <- read.delim(file)
-  #change the bin names
   sample <- substr(basename(file),1,5)
+  #standardize the bin names
   current$bins <- paste(sample, current$bins, sep="_")
-
-  rownames(current) <- binNames[[current$bins]]
-  colnames(current) <- substr(colnames(current),1,5)
-  colnames(current) <- sNames[[colnames(current)]]
-  current <- subset(current, -current$bins)
   print(current)
-  print(total)
-  # stack it onto the existing df
-  total <-rbind(total, current)
+  # take out the bins that aren't complete
+  current <- subset(current, current$bins %in% names(binNames))
+  # rename the rows to standardized bin names
+  rownames(current) <- current$bins
+  # take out the bins column
+  current <- subset(current, select=-bins)
 
+  # standardize the sample names
+  colnames(current) <- substr(colnames(current),1,5)
+
+  # normalize everything so far
+  for (i in c(1:ncol(current))) {
+    current[,i] <- current[,i]/normFactors[i]
+  # stack it onto the existing df
+  }
+  print(current)
+  print(length(rownames(current)))
   # get rid of the weird indexing column that has indices from both DFs
   #total <- subset(total, -total$X)
-}
+  total <-rbind(total, current)
+  print(total)
+  print(length(rownames(total)))
 
+}
 
 # # change all the column (sample) names to make more sense
 # colNameList <- colnames(total)
@@ -84,9 +98,11 @@ for (file in myFiles) {
 #
 #
 # # divide each column by the normalization factor
-cols <- colnames(total)
-for (col in cols) {
-  total$col <- total$col / normFactors[[total$col]]
-}
+
+colnames(total) <- sapply(colnames(total), nameSample)
+rownames(total) <- sapply(rownames(total), nameBins)
+
 
 # write to an output text file
+print("Done. Saved normalized coverages to 'normalized_covg_bins_RNA.txt'")
+write.table(total,file="normalized_covg_bins_RNA.txt",row.names=TRUE,col.names=TRUE, quote=FALSE, sep='\t')

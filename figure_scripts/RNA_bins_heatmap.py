@@ -10,7 +10,6 @@ from matplotlib.text import Text
 # parser
 parser = ap.ArgumentParser(description = 'A script to make a binary heatmap out of a presence-absence table.')
 parser.add_argument('XL', metavar = 'EXCEL_FILE', help = "Excel file that has a sheet 'table' with the table.")
-parser.add_argument('cols', metavar = 'BINS', type = int, help = 'Number of bins to read from the Excel file.')
 parser.add_argument('-o', metavar = 'PLOT_FILE', default = False, help = 'Full file name for the *.pdf plot.')
 parser.add_argument('-r', action = 'store_true', default = False, help = 'Make a heatmap with hierarchically clustered rows.')
 parser.add_argument('-c', action = 'store_true', default = False, help = 'Make a heatmap with hierarchically clustered columns.')

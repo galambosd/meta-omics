@@ -1,6 +1,6 @@
 FS856_Bin_14	Aquificales_14
 FS856_Bin_7	Flavobacteriales_7
-FS856_Bin_29 	Desulfobacterales_29
+FS856_Bin_29	Desulfobacterales_29
 FS856_Bin_12	Other Campylobacterales_12
 FS856_Bin_37	Sulfurovum_37
 FS856_Bin_26	Archaeoglobi_26
@@ -20,7 +20,7 @@ FS854_Bin_110	Zetaproteobacteria_110
 FS848_Bin_13	Methanococci_13
 FS848_Bin_21	Thiotrichales_21
 FS879_Bin_14	Aquificales_14c
-FS879_Bin_26	Desulfobacterales
+FS879_Bin_26	Desulfobacterales_26
 FS879_Bin_34	Thiotrichales_34
 FS879_Bin_33	Thiotrichales_33
 FS866_Bin_14	Aquificales_14b
@@ -42,7 +42,7 @@ FS881_Bin_32	Thermoprotei_32
 FS881_Bin_18	Nanohaloarchaea_18
 FS881_Bin_5	Pseudomonadales_5
 FS881_Bin_3	Pseudomonadales_3
-FS881_Bin_43	Sulfurovum_43
+FS881_Bin_43	Sulfurovum_43b
 FS881_Bin_45	Sulfurovum_45
 FS881_Bin_27	Thiotrichales_27
 FS881_Bin_50	Candidatus Caldiarchaeum_50
@@ -59,15 +59,15 @@ FS844_Bin_16	Desulfobacterales_16
 FS844_Bin_74	Desulfobacterales_74
 FS844_Bin_45	Methanomicrobia_45
 FS844_Bin_41	Methanomicrobia_41
-FS844_Bin_78  	Methanomicrobia_78
-FS844_Bin_84  	Methanomicrobia_84
-FS844_Bin_54  	Nanohaloarchaea_54
-FS872_Bin_4 	Clostridia_4
-FS872_Bin_8 	Clostridia_8
-FS844_Bin_20  	Flavobacteriales_20
-FS844_Bin_43  	Sulfurovum_43
-FS844_Bin_13  	Sulfurovum_13
-FS844_Bin_56  	Thiotrichales_56
-FS874_Bin_5 	Sphingomonadales_5
-FS874_Bin_3 	Alteromonadales_3
-FS874_Bin_4 	Pseudomonadales_4
+FS844_Bin_78	Methanomicrobia_78
+FS844_Bin_84	Methanomicrobia_84
+FS844_Bin_54	Nanohaloarchaea_54
+FS872_Bin_4	Clostridia_4
+FS872_Bin_8	Clostridia_8
+FS844_Bin_20	Flavobacteriales_20
+FS844_Bin_43	Sulfurovum_43
+FS844_Bin_13	Sulfurovum_13
+FS844_Bin_56	Thiotrichales_56
+FS874_Bin_5	Sphingomonadales_5
+FS874_Bin_3	Alteromonadales_3
+FS874_Bin_4	Pseudomonadales_4
