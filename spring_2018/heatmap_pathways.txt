@@ -1,8 +1,14 @@
 Wood-Ljungdahl
 reductive TCA
 CBB
+glycolysis
 methanogenesis
 methanotrophy
 sulfide oxidation
 sulfite reduction
+thiosulfate oxidation
+cytochrome c oxidase
 
+
+For kicks
+pufA/pufB/pufML (light-harvesting)
