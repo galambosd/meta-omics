@@ -8,7 +8,12 @@ sulfide oxidation
 sulfite reduction
 thiosulfate oxidation
 cytochrome c oxidase
-
+denitrification
+partial denitrification
+DNRA
+anammox
+N fixation
 
 For kicks
 pufA/pufB/pufML (light-harvesting)
+aerobic respiration
