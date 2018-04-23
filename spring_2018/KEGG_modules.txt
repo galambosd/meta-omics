@@ -1,0 +1,97 @@
+C-fixation in prokaryotes (map00720)
+M00173               Reductive citrate cycle (Arnon-Buchanan cycle) 
+M00374               Dicarboxylate-hydroxybutyrate cycle 
+M00375               Hydroxypropionate-hydroxybutylate cycle 
+M00376               3-Hydroxypropionate bi-cycle 
+M00377               Reductive acetyl-CoA pathway (Wood-Ljungdahl pathway) 
+M00579               Phosphate acetyltransferase-acetate kinase pathway, acetyl-CoA => acetate 
+M00620               Incomplete reductive citrate cycle, acetyl-CoA => oxoglutarate
+
+Methane (map00680)
+M00174               Methane oxidation, methanotroph, methane => formaldehyde 
+M00344               Formaldehyde assimilation, xylulose monophosphate pathway 
+M00345               Formaldehyde assimilation, ribulose monophosphate pathway 
+M00346               Formaldehyde assimilation, serine pathway 
+M00356               Methanogenesis, methanol => methane 
+M00357               Methanogenesis, acetate => methane 
+M00358               Coenzyme M biosynthesis 
+M00378               F420 biosynthesis 
+M00422               Acetyl-CoA pathway, CO2 => acetyl-CoA 
+M00563               Methanogenesis, methylamine/dimethylamine/trimethylamine => methane 
+M00567               Methanogenesis, CO2 => methane 
+M00608               2-Oxocarboxylic acid chain extension, 2-oxoglutarate => 2-oxoadipate => 2-oxopimelate => 2-oxosubera 
+
+Nitrogen (map00910)
+M00175               Nitrogen fixation, nitrogen => ammonia 
+M00438               Nitrate/nitrite transport system 
+M00528               Nitrification, ammonia => nitrite 
+M00529               Denitrification, nitrate => nitrogen 
+M00530               Dissimilatory nitrate reduction, nitrate => ammonia 
+M00531               Assimilatory nitrate reduction, nitrate => ammonia 
+M00804               Complete nitrification, comammox, ammonia => nitrite => nitrate
+
+Sulfur(map00920)
+M00595               Thiosulfate oxidation by SOX complex, thiosulfate => sulfate 
+M00596               Dissimilatory sulfate reduction, sulfate => H2S
+
+Glycolysis/gluconeogenesis (map00010)
+M00001               Glycolysis (Embden-Meyerhof pathway), glucose => pyruvate 
+M00002               Glycolysis, core module involving three-carbon compounds 
+M00003               Gluconeogenesis, oxaloacetate => fructose-6P 
+M00114               Ascorbate biosynthesis, plants, glucose-6P => ascorbate 
+M00265               PTS system, glucose-specific II component 
+M00266               PTS system, maltose/glucose-specific II component 
+M00272               PTS system, beta-glucoside (arbutin/salicin/cellobiose)-specific II component 
+M00307               Pyruvate oxidation, pyruvate => acetyl-CoA 
+M00809               PTS system, glucose-specific II component
+
+TCA/Krebs (map00020)
+M00003               Gluconeogenesis, oxaloacetate => fructose-6P 
+M00009               Citrate cycle (TCA cycle, Krebs cycle) 
+M00010               Citrate cycle, first carbon oxidation, oxaloacetate => 2-oxoglutarate 
+M00011               Citrate cycle, second carbon oxidation, 2-oxoglutarate => oxaloacetate 
+M00307               Pyruvate oxidation, pyruvate => acetyl-CoA 
+M00740               Methylaspartate cycle
+
+Pentose phosphate (map00030)
+M00004               Pentose phosphate pathway (Pentose phosphate cycle) 
+M00005               PRPP biosynthesis, ribose 5P => PRPP 
+M00006               Pentose phosphate pathway, oxidative phase, glucose 6P => ribulose 5P 
+M00007               Pentose phosphate pathway, non-oxidative phase, fructose 6P => ribose 5P 
+M00008               Entner-Doudoroff pathway, glucose-6P => glyceraldehyde-3P + pyruvate 
+M00061	D-Glucuronate degradation, D-glucuronate => pyruvate + D-glyceraldehyde 3P 
+M00308	Semi-phosphorylative Entner-Doudoroff pathway, gluconate => glycerate-3P 
+M00309	Non-phosphorylative Entner-Doudoroff pathway, gluconate/galactonate => glycerate 
+M00580	Pentose phosphate pathway, archaea, fructose 6P => ribose 5P 
+M00631	D-Galacturonate degradation (bacteria), D-galacturonate => pyruvate + D-glyceraldehyde 3P 
+M00633	Semi-phosphorylative Entner-Doudoroff pathway, gluconate/galactonate => glycerate-3P
+
+Selected ABC transporters (ko02010)
+M00185	Sulfate transport system 
+M00298	Multidrug/hemolysin transport system
+M00438	Nitrate/nitrite transport system
+M00325	alpha-Hemolysin/cyclolysin transport system 
+M00582	Energy-coupling factor transport system
+
+Other membrane things (from Elaina Graham's Paper)
+M00142               NADH:ubiquinone oxidoreductase, mitochondria 
+M00143               NADH dehydrogenase (ubiquinone) Fe-S protein/flavoprotein complex, mitochondria 
+M00144               NADH:quinone oxidoreductase, prokaryotes 
+M00145               NAD(P)H:quinone oxidoreductase, chloroplasts and cyanobacteria 
+M00146               NADH dehydrogenase (ubiquinone) 1 alpha subcomplex 
+M00147               NADH dehydrogenase (ubiquinone) 1 beta subcomplex 
+M00148               Succinate dehydrogenase (ubiquinone) 
+M00149               Succinate dehydrogenase, prokaryotes 
+M00150               Fumarate reductase, prokaryotes 
+M00151               Cytochrome bc1 complex respiratory unit 
+M00152               Cytochrome bc1 complex 
+M00153               Cytochrome bd ubiquinol oxidase 
+M00154               Cytochrome c oxidase 
+M00155               Cytochrome c oxidase, prokaryotes 
+M00156               Cytochrome c oxidase, cbb3-type 
+M00157               F-type ATPase, prokaryotes and chloroplasts 
+M00158               F-type ATPase, eukaryotes 
+M00159               V/A-type ATPase, prokaryotes 
+M00160               V-type ATPase, eukaryotes 
+M00416               Cytochrome aa3-600 menaquinol oxidase 
+M00417               Cytochrome o ubiquinol oxidase 
