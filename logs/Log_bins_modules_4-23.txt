@@ -2,5 +2,6 @@
 
 1234  anvi-migrate-db CONTIGS.db 
 
+./anvi_profile_upgrade.sh
 
-~/file_org/MAG_data/anvio_bin_summary $ less to_update.txt | xargs -I{} anvi-migrate-db {}/SAMPLES-MERGED-AA-v232/PROFILE.db
+~/file_org/MAG_data/anvio_bin_summary/FS854/SAMPLES-MERGED-RNA $ ANVIO_SAMPLES_DB=SKIP anvi-migrate-db PROFILE.db 
