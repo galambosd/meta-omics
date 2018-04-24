@@ -2,3 +2,5 @@
 
 1234  anvi-migrate-db CONTIGS.db 
 
+
+~/file_org/MAG_data/anvio_bin_summary $ less to_update.txt | xargs -I{} anvi-migrate-db {}/SAMPLES-MERGED-AA-v232/PROFILE.db
