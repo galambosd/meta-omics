@@ -1,0 +1,4 @@
+# for every sample in MAG_data/MCR_pangenomics_old that's not FS842,66,74 or 77, update the contigs database
+
+1234  anvi-migrate-db CONTIGS.db 
+
