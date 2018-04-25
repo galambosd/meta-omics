@@ -1,6 +1,10 @@
 library("optparse")
+library("rPython")
+library("heatmap3")
 
 calc_MCR<-function(bins,modules){
+  # pass these arguments to functions from the python file to
+  # return the actual MCR number
  return()
 }
 
@@ -48,3 +52,5 @@ for (module in names(module):){
 # put the number in a tab-delimited file w/ labeled rows/columns
 write.table(output, file='bins_module_completetion.txt',row.names=TRUE,col.names=TRUE, quote=FALSE, sep='\t')
 # if you want rows to be modules, put modules first in for loop
+
+# go ahead and immediately plot a heatmap with clustering?
