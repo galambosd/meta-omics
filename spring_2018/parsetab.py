@@ -27,10 +27,10 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> expression","S'",1,None,None,None),
-  ('expression -> expression PLUS expression','expression',3,'p_expression_plus','KEGG_module_lex_parser.py',37),
-  ('expression -> expression SPACE expression','expression',3,'p_expression_space','KEGG_module_lex_parser.py',42),
-  ('expression -> expression MINUS expression','expression',3,'p_expression_minus','KEGG_module_lex_parser.py',48),
-  ('expression -> expression COMMA expression','expression',3,'p_expression_comma','KEGG_module_lex_parser.py',54),
-  ('expression -> KOnum','expression',1,'p_expression_KOnum','KEGG_module_lex_parser.py',60),
-  ('expression -> LPAREN expression RPAREN','expression',3,'p_expression_paren','KEGG_module_lex_parser.py',68),
+  ('expression -> expression PLUS expression','expression',3,'p_expression_plus','KEGG_module_lex_parser.py',38),
+  ('expression -> expression SPACE expression','expression',3,'p_expression_space','KEGG_module_lex_parser.py',46),
+  ('expression -> expression MINUS expression','expression',3,'p_expression_minus','KEGG_module_lex_parser.py',54),
+  ('expression -> expression COMMA expression','expression',3,'p_expression_comma','KEGG_module_lex_parser.py',59),
+  ('expression -> KOnum','expression',1,'p_expression_KOnum','KEGG_module_lex_parser.py',64),
+  ('expression -> LPAREN expression RPAREN','expression',3,'p_expression_paren','KEGG_module_lex_parser.py',71),
 ]

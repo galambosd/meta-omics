@@ -2,7 +2,8 @@
 import ply.lex as lex
 import ply.yacc as yacc
 
-
+num_space = 1.0
+nums_seen = 1.0
 tokens = (
     'KOnum',
     'PLUS',
@@ -22,38 +23,33 @@ t_RPAREN=r'\)'
 t_SPACE='\ '
 
 lexer=lex.lex()
-
-data = '(K00001,K00009) (K00002+K00003+K00004,K00005) (K00006-K00007,K00008)'
-bin_set = ['K00001','K00004','K00008']
-lexer.input(data)
-
-for tok in lexer:
-    print(tok)
-
-
 # Get the token map from the lexer.  This is required.
 
 def p_expression_plus(p):
     'expression : expression PLUS expression'
-    p[0] = (p[1]+p[3])/2
-    print('1',p[0])
+    global nums_seen
+    nums_seen+=1
+    p[0]=(p[1]*(nums_seen-1)+p[3])/nums_seen
 
 def p_expression_space(p):
     'expression : expression SPACE expression'
-    p[0] = (p[1]+p[3])/2
-    print('2',p[0])
-
+    global nums_seen
+    global num_space
+    nums_seen = 1.0
+    p[0] = p[1]+p[3]
+    num_space+=1
 
 def p_expression_minus(p):
     'expression : expression MINUS expression'
+    global nums_seen
+    nums_seen = 1.0
     p[0] = p[1]
-    print('3',p[0])
-
 
 def p_expression_comma(p):
     'expression : expression COMMA expression'
+    global nums_seen
+    nums_seen = 1.0
     p[0] = max(p[1],p[3])
-    print('4',p[0])
 
 
 def p_expression_KOnum(p):
@@ -62,12 +58,12 @@ def p_expression_KOnum(p):
         p[0]=1.0
     else:
         p[0]=0.0
-    print('5',p[0])
 
 def p_expression_paren(p):
     'expression : LPAREN expression RPAREN'
+    global nums_seen
+    nums_seen = 1.0
     p[0] = p[2]
-    print('6',p[0])
 
 # Error rule for syntax errors
 def p_error(p):
@@ -81,8 +77,17 @@ precedence = (
   ('left', 'KOnum'),
 )
 
-# Build the parser
-parser = yacc.yacc()
+def calc_MCR(module, bin):
+    # Build the parser
+    parser = yacc.yacc()
+    global bin_set
+    global num_space
+    bin_set = bin
+    result = parser.parse(module)
+    return result/num_space
 
-result = parser.parse(data, debug=True)
-print(result)
+if __name__ == "__main__":
+    module = input("Module definition\n>")
+    # some hardcoded set of KOs for the bin
+    bin = ['K11780','K00003','K00006']
+    print(calc_MCR(module, bin))

@@ -5,3 +5,5 @@
 ./anvi_profile_upgrade.sh
 
 ~/file_org/MAG_data/anvio_bin_summary/FS854/SAMPLES-MERGED-RNA $ ANVIO_SAMPLES_DB=SKIP anvi-migrate-db PROFILE.db 
+
+~/file_org/mapping_data/RNA_mapping $ ./../../MAG_data/anvio_bin_summary/anvi_profile_upgrade.sh 
