@@ -6,4 +6,387 @@
 
 ~/file_org/MAG_data/anvio_bin_summary/FS854/SAMPLES-MERGED-RNA $ ANVIO_SAMPLES_DB=SKIP anvi-migrate-db PROFILE.db 
 
-~/file_org/mapping_data/RNA_mapping $ ./../../MAG_data/anvio_bin_summary/anvi_profile_upgrade.sh 
+~/file_org/mapping_data/RNA_mapping $ ./../../MAG_data/anvio_bin_summary/anvi_profile_upgrade.sh
+
+# upgrading more profiles
+~/file_org/MAG_data/anvio_bin_summary $ ./anvi_profile_upgrade.sh 
+
+
+~/file_org/mapping_data/RNA_mapping $ less ~/file_org/MAG_data/anvio_bin_summary_new/to_summarize.txt | xa_assembly_contigs.dbrate-db {}/MidCaymanRise_{}_idba 
+anvi-migrate-db FS844/MidCaymanRise_FS844_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS844/MidCaymanRise_FS844_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 10
+Target Version ...............................: 10
+anvi-migrate-db FS848/MidCaymanRise_FS848_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS848/MidCaymanRise_FS848_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS848/MidCaymanRise_FS848_idba_assembly_contigs.h5
+Contigs found ................................: 25,298
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS849/MidCaymanRise_FS849_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Traceback (most recent call last):
+  File "/usr/local/bin/anvi-migrate-db", line 4, in <module>
+    __import__('pkg_resources').run_script('anvio===4-master', 'anvi-migrate-db')
+  File "/usr/local/lib/python3.6/site-packages/pkg_resources/__init__.py", line 743, in run_script
+    self.require(requires)[0].run_script(script_name, ns)
+  File "/usr/local/lib/python3.6/site-packages/pkg_resources/__init__.py", line 1498, in run_script
+    exec(code, namespace, namespace)
+  File "/usr/local/lib/python3.6/site-packages/anvio-4_master-py3.6-linux-x86_64.egg/EGG-INFO/scripts/anvi-migrate-db", line 111, in <module>
+    Migrater(args).process()
+  File "/usr/local/lib/python3.6/site-packages/anvio-4_master-py3.6-linux-x86_64.egg/EGG-INFO/scripts/anvi-migrate-db", line 29, in __init__
+    filesnpaths.is_file_exists(self.db_path)
+  File "/usr/local/lib/python3.6/site-packages/anvio-4_master-py3.6-linux-x86_64.egg/anvio/filesnpaths.py", line 55, in is_file_exists
+    raise FilesNPathsError("No such file: '%s' :/" % file_path)
+anvio.errors.FilesNPathsError: 
+
+File/Path Error: No such file: 'FS849/MidCaymanRise_FS849_idba_assembly_contigs.db' :/
+
+
+anvi-migrate-db FS851/MidCaymanRise_FS851_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS851/MidCaymanRise_FS851_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS851/MidCaymanRise_FS851_idba_assembly_contigs.h5
+Contigs found ................................: 5,249
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS852/MidCaymanRise_FS852_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS852/MidCaymanRise_FS852_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS852/MidCaymanRise_FS852_idba_assembly_contigs.h5
+Contigs found ................................: 12,969
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS854/MidCaymanRise_FS854_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS854/MidCaymanRise_FS854_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS854/MidCaymanRise_FS854_idba_assembly_contigs.h5
+Contigs found ................................: 63,699
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS856/MidCaymanRise_FS856_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS856/MidCaymanRise_FS856_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS856/MidCaymanRise_FS856_idba_assembly_contigs.h5
+Contigs found ................................: 23,601
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS872/MidCaymanRise_FS872_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS872/MidCaymanRise_FS872_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS872/MidCaymanRise_FS872_idba_assembly_contigs.h5
+Contigs found ................................: 18,627
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS879/MidCaymanRise_FS879_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS879/MidCaymanRise_FS879_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS879/MidCaymanRise_FS879_idba_assembly_contigs.h5
+Contigs found ................................: 28,310
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+anvi-migrate-db FS881/MidCaymanRise_FS881_idba_assembly_contigs.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: FS881/MidCaymanRise_FS881_idba_assembly_contigs.db
+Detected Type ................................: contigs
+Current Version ..............................: 8
+Target Version ...............................: 10
+* The anvi'o contigs database has just been updated with a description that                                                                                                    
+contains 4 words and 23 characters.
+
+* The contigs database is now 9! All this upgrade did was to associate your
+contigs db with a project name (which happened to be 'NO_NAME', because anvi'o
+likes you very much)
+
+Auxiliary data file found ....................: FS881/MidCaymanRise_FS881_idba_assembly_contigs.h5
+Contigs found ................................: 20,662
+                                                                                                                                                                               
+* The contigs database is now 10, and the now-obsolete '.h5' file is gone forever
+and ever.
+
+
+
+# Importing functions into existing contigs databases
+
+~/file_org/MAG_data/anvio_bin_summary_new $ ../anvi_imports.sh FS844 FS848 FS851 FS852 FS854 FS856 FS872 FS879 FS881
+FS844
+
+WARNING
+===============================================
+Some of the annotaiton sources you want to add into the database are already in
+the db. So anvi'o will REPLACE those with the incoming data from these sources:
+KO
+
+Gene functions ...............................: 248623 function calls from 1 sources for 248623 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 194,656
+Num gene caller ids in the db ................: 239,274                                              
+Num gene caller ids in the incoming data .....: 194,656
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 194656 gene caller ids that do not appear to be in the database. This  
+              is a step you must be very careful to make sure you are not importing           
+              annotations for genes that have nothing to do with your contigs database. To    
+              make sure of that, you should always work with `anvi-get-dna-sequences-for-gene-
+              calls` or `anvi-get-aa-sequences-for-gene-calls` programs to get the data to    
+              annotate. For instance one of the gene caller ids you have in your input data   
+              that does not appear in the database is this one: '1048581'. Anvi'o hopes it    
+              makes sense to you, because it definitely does not make any sense to anvi'o :(  
+
+
+FS848
+
+WARNING
+===============================================
+Some of the annotaiton sources you want to add into the database are already in
+the db. So anvi'o will REPLACE those with the incoming data from these sources:
+KO
+
+Gene functions ...............................: 64637 function calls from 1 sources for 64637 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 52,878
+Num gene caller ids in the db ................: 63,002                                               
+Num gene caller ids in the incoming data .....: 52,878
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 52878 gene caller ids that do not appear to be in the database. This is
+              a step you must be very careful to make sure you are not importing annotations  
+              for genes that have nothing to do with your contigs database. To make sure of   
+              that, you should always work with `anvi-get-dna-sequences-for-gene-calls` or    
+              `anvi-get-aa-sequences-for-gene-calls` programs to get the data to annotate. For
+              instance one of the gene caller ids you have in your input data that does not   
+              appear in the database is this one: '10223621'. Anvi'o hopes it makes sense to  
+              you, because it definitely does not make any sense to anvi'o :(                 
+
+
+FS851
+
+WARNING
+===============================================
+Some of the annotaiton sources you want to add into the database are already in
+the db. So anvi'o will REPLACE those with the incoming data from these sources:
+KO
+
+Gene functions ...............................: 11563 function calls from 1 sources for 11563 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 10,312
+Num gene caller ids in the db ................: 11,347                                               
+Num gene caller ids in the incoming data .....: 10,312
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 10312 gene caller ids that do not appear to be in the database. This is
+              a step you must be very careful to make sure you are not importing annotations  
+              for genes that have nothing to do with your contigs database. To make sure of   
+              that, you should always work with `anvi-get-dna-sequences-for-gene-calls` or    
+              `anvi-get-aa-sequences-for-gene-calls` programs to get the data to annotate. For
+              instance one of the gene caller ids you have in your input data that does not   
+              appear in the database is this one: '131072'. Anvi'o hopes it makes sense to    
+              you, because it definitely does not make any sense to anvi'o :(                 
+
+
+FS852
+Gene functions ...............................: 29797 function calls from 1 sources for 29797 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 25,093
+Num gene caller ids in the db ................: 29,235                                               
+Num gene caller ids in the incoming data .....: 25,093
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 25093 gene caller ids that do not appear to be in the database. This is
+              a step you must be very careful to make sure you are not importing annotations  
+              for genes that have nothing to do with your contigs database. To make sure of   
+              that, you should always work with `anvi-get-dna-sequences-for-gene-calls` or    
+              `anvi-get-aa-sequences-for-gene-calls` programs to get the data to annotate. For
+              instance one of the gene caller ids you have in your input data that does not   
+              appear in the database is this one: '1048582'. Anvi'o hopes it makes sense to   
+              you, because it definitely does not make any sense to anvi'o :(                 
+
+
+FS854
+Gene functions ...............................: 235925 function calls from 1 sources for 235925 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 180,039
+Num gene caller ids in the db ................: 225,843                                              
+Num gene caller ids in the incoming data .....: 180,039
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 180039 gene caller ids that do not appear to be in the database. This  
+              is a step you must be very careful to make sure you are not importing           
+              annotations for genes that have nothing to do with your contigs database. To    
+              make sure of that, you should always work with `anvi-get-dna-sequences-for-gene-
+              calls` or `anvi-get-aa-sequences-for-gene-calls` programs to get the data to    
+              annotate. For instance one of the gene caller ids you have in your input data   
+              that does not appear in the database is this one: '1048581'. Anvi'o hopes it    
+              makes sense to you, because it definitely does not make any sense to anvi'o :(  
+
+
+FS856
+Gene functions ...............................: 81150 function calls from 1 sources for 81150 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 63,736
+Num gene caller ids in the db ................: 77,984                                               
+Num gene caller ids in the incoming data .....: 63,736
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 63736 gene caller ids that do not appear to be in the database. This is
+              a step you must be very careful to make sure you are not importing annotations  
+              for genes that have nothing to do with your contigs database. To make sure of   
+              that, you should always work with `anvi-get-dna-sequences-for-gene-calls` or    
+              `anvi-get-aa-sequences-for-gene-calls` programs to get the data to annotate. For
+              instance one of the gene caller ids you have in your input data that does not   
+              appear in the database is this one: '1179661'. Anvi'o hopes it makes sense to   
+              you, because it definitely does not make any sense to anvi'o :(                 
+
+
+FS872
+Gene functions ...............................: 54261 function calls from 1 sources for 54261 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 42,640
+Num gene caller ids in the db ................: 53,558                                               
+Num gene caller ids in the incoming data .....: 42,640
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 42640 gene caller ids that do not appear to be in the database. This is
+              a step you must be very careful to make sure you are not importing annotations  
+              for genes that have nothing to do with your contigs database. To make sure of   
+              that, you should always work with `anvi-get-dna-sequences-for-gene-calls` or    
+              `anvi-get-aa-sequences-for-gene-calls` programs to get the data to annotate. For
+              instance one of the gene caller ids you have in your input data that does not   
+              appear in the database is this one: '1179651'. Anvi'o hopes it makes sense to   
+              you, because it definitely does not make any sense to anvi'o :(                 
+
+
+FS879
+Gene functions ...............................: 76217 function calls from 1 sources for 76217 unique gene calls has been added to the contigs database.
+Total num hits found .........................: 60,871
+Num gene caller ids in the db ................: 73,655                                               
+Num gene caller ids in the incoming data .....: 60,871
+
+
+Config Error: Taxonomy information for genes you are trying to import into the database       
+              contains 60871 gene caller ids that do not appear to be in the database. This is
+              a step you must be very careful to make sure you are not importing annotations  
+              for genes that have nothing to do with your contigs database. To make sure of   
+              that, you should always work with `anvi-get-dna-sequences-for-gene-calls` or    
+              `anvi-get-aa-sequences-for-gene-calls` programs to get the data to annotate. For
+              instance one of the gene caller ids you have in your input data that does not   
+              appear in the database is this one: '10223621'. Anvi'o hopes it makes sense to  
+              you, because it definitely does not make any sense to anvi'o :(                 
+
+
+../anvi_imports.sh: line 5: cd: FS881:: No such file or directory
+FS881:
+
+
+File/Path Error: No such file: '*functions_matrix.txt' :/
+
+
+
+
+File/Path Error: No such file: '*taxonomy_matrix.txt' :/
+
+
+Done.
+
+
+# Add FS881 bc it didn't work for some reason
+galambosd@baross:~/file_org/MAG_data/anvio_bin_summary_new/FS881galambosd@baross ~/file_org/MAG_data/8.a.gene_product_contigs_over1kb_functions_matrix.txt -c MidCaymanRise_FS881_idba_assembly_contigs.db
+Gene functions ...............................: 82323 function calls from 1 sources for 82323 unique gene calls has been added to the contigs database.
+ 
