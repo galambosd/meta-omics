@@ -386,7 +386,89 @@ File/Path Error: No such file: '*taxonomy_matrix.txt' :/
 Done.
 
 
-# Add FS881 bc it didn't work for some reason
+#Add FS881 bc it didn't work for some reason
 galambosd@baross:~/file_org/MAG_data/anvio_bin_summary_new/FS881galambosd@baross ~/file_org/MAG_data/8.a.gene_product_contigs_over1kb_functions_matrix.txt -c MidCaymanRise_FS881_idba_assembly_contigs.db
 Gene functions ...............................: 82323 function calls from 1 sources for 82323 unique gene calls has been added to the contigs database.
  
+
+
+# Exporting a bin collection from refined FS854
+~/file_org/MAG_data/anvi_refine/FS854/SAMPLES-MERGED-AA-v232 $ anvi-migrate-db PROFILE.db
+
+
+ ~/file_org/MAG_data/anvi_refine/FS854/SAMPLES-MERGED-AA-v232 $ ANVIO_SAMPLES_DB=SKIP anvi-migrate-db PROFILE.db 
+/usr/local/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Database Path ................................: PROFILE.db
+Detected Type ................................: profile
+Current Version ..............................: 23
+Target Version ...............................: 23
+
+~/file_org/MAG_data/anvi_refine/FS854/SAMPLES-MERGED-AA-v232 $ anvi-export-collection -p PROFILE.db -O FS854_bin_collection_refined -C FS854_bins_v232
+Collection found .............................: "FS854_bins_v232" (19332 items in 93 bins)
+Report unbinned items if there are any .......: False
+Items file path ..............................: FS854_bin_collection_refined.txt
+Bins info file path ..........................: FS854_bin_collection_refined-info.txt
+
+~/file_org/MAG_data/anvio_bin_summary_new/FS854 $ anvi-import-collection -c MidCaymanRise_FS854_idba_assembly_contigs.db -p PROFILE.db FS854_bin_collection_refined.txt -C FS854_bins_v232
+Num contigs in the contigs database ..........: 63,762
+Num splits in the contigs database ...........: 63,924
+Num splits in the input file .................: 19,332
+Num bins the input file describes ............: 93
+Num splits both input file and the db has ....: 19,332
+Collections ..................................: The collection "FS854_bins_v232" that describes 19,332 splits has been successfully added to the database at "PROFILE.db".
+
+
+# running the anvi-summarize script
+~/file_org/MAG_data/anvio_bin_summary_new $ ../anvi_summarize.sh FS854 
+
+
+# anvi-summarize didn't work for listing gene calls w/ functions for each bin. Made a new contigs DB:
+~/file_org/MAG_data/anvio_bin_summary_new/FS854 $ anvi-gen-contigs-database -f ../../../mapping_data/RNA_mapping/FS854/MidCaymanRise_FS854_idba_assembly_fixed.fa --external-gene-calls FS854_external_gene_calls_matrix.txt --ignore-internal-stop-codons
+Input FASTA file .............................: /Accounts/galambosd/file_org/mapping_data/RNA_mapping/FS854/MidCaymanRise_FS854_idba_assembly_fixed.fa
+
+Anvi'o made things up for you
+===============================================
+You are generating a new anvi'o contigs database, but you are not specifying a
+project name for it. FINE. Anvi'o, in desperation, will use the input file name
+to set the project name for this contigs database (which is
+'MidCaymanRise_FS854_idba_assembly_fixed'). If you are not happy with that, feel
+free to kill and restart this process. If you are not happy with this name, but
+you don't like killing things either, maybe next time you should either name
+your FASTA files better, or use the `--project-name` parameter to set your
+desired name.
+
+Name .........................................: MidCaymanRise_FS854_idba_assembly_fixed
+Description ..................................: No description is given
+Split Length .................................: 20,000
+K-mer size ...................................: 4
+Skip gene calling? ...........................: False
+External gene calls provided? ................: FS854_external_gene_calls_matrix.txt
+Ignoring internal stop codons? ...............: True
+Splitting pays attention to gene calls? ......: True
+External gene calls ..........................: 233218 gene calls recovered and will be processed.
+
+WARNING
+===============================================
+Please read this carefully: Your external gene calls contained open reading
+frames with internal stop codons, and you asked anvi'o to ignore those. Anvi'o
+replaced internal stop codons with 'X' characters, and stored them in the
+contigs database that way. 3575 of your genes, which corresponded to 1.53% of
+the total 233218 genes, had internal stop codons. We hope you are happy.
+
+Contigs with at least one gene call ..........: 63569 of 63762 (99.7%)
+Contigs database .............................: A new database, CONTIGS.db, has been created.
+Number of contigs ............................: 63,762
+Number of splits .............................: 63,924
+Total number of nucleotides ..................: 185,076,692
+Gene calling step skipped ....................: False
+Splits broke genes (non-mindful mode) ........: False
+Desired split length (what the user wanted) ..: 20,000
+Average split length (wnat anvi'o gave back) .: 23,511
+
+
+~/file_org/MAG_data/anvio_bin_summary_new/FS854 $ anvi-import-functions -i 3300013795.a.gene_product_contigs_over1kb_functions_matrix.txt -c CONTIGS.db 
+Gene functions ...............................: 235925 function calls from 1 sources for 235925 unique gene calls has been added to the contigs database.
+
+# new contigs DB is incompatible w/ the profile. Trying to do anvi-summarize for FS844:
+~/file_org/MAG_data/anvio_bin_summary_new/FS844 $ anvi-summarize -p PROFILE.db -c *contigs.db -C FS844_bins_RNA -o SUMMARY_FS844_bins_RNA
