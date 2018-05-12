@@ -1,6 +1,7 @@
 library("optparse")
 library("rPython")
 library("heatmap3")
+library('dplyr')
 
 calc_MCR<-function(bins,modules){
   # pass these arguments to functions from the python file to
@@ -34,20 +35,22 @@ for (bin in bins_df[,2]:){
 names(bins_KO) <- bins_KO[,1]
 
 
-# create empty data frame for everything
-output <- data.frame()
+# create empty data frame for everything w/ as many rows as bins
+output <- data.frame(names(bins_KO))
 
 # rename the rows and columns
-colnames(output)<-names(bins_KO)
-rownames(output)<-names(module_defs)
+rownames(output)<-names(bins_KO)
+names(output) <- c('BINS')
 
 # for each module-bin combo, calculate MCR
 
 for (module in names(module):){
-  for (bin in names(bins_KO):){
-    output[module, bin]<-calc_MCR(module_defs[[module]], bins_KO[[bin]])
-   }
+  col <- lapply(bins_KO, calc_MCR, module = module_defs[[module]])
+  names(col) <- module
+  output <- left_join(output, col, by = 'BINS')
  }
+
+ output <- subset(output, select = -c(output$BINS))
 
 # put the number in a tab-delimited file w/ labeled rows/columns
 write.table(output, file='bins_module_completetion.txt',row.names=TRUE,col.names=TRUE, quote=FALSE, sep='\t')
