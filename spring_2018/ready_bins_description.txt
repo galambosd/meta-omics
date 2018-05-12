@@ -1,0 +1,14 @@
+FS866_Bin_14	Aquificales_14b
+FS866_Bin_21	Aquificales_21
+FS866_Bin_23	Thermoprotei_23
+FS866_Bin_20	Thermoprotei_20
+FS866_Bin_7	Methanococci_7
+FS866_Bin_4	Thermococci_4
+FS866_Bin_31	Sulfurovum_31
+FS866_Bin_43	Nanoarchaeales_43
+FS877_Bin_2	Sphingomonadales_2
+FS877_Bin_3	Alteromonadales_3b
+FS877_Bin_1	Pseudomonadales_1
+FS874_Bin_5	Sphingomonadales_5
+FS874_Bin_3	Alteromonadales_3
+FS874_Bin_4	Pseudomonadales_4
