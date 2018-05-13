@@ -85,9 +85,3 @@ def calc_MCR(module, bin):
     bin_set = bin
     result = parser.parse(module)
     return result/num_space
-
-if __name__ == "__main__":
-    module = input("Module definition\n>")
-    # some hardcoded set of KOs for the bin
-    bin = ['K11780','K00003','K00006']
-    print(calc_MCR(module, bin))

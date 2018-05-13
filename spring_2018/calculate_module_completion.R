@@ -3,10 +3,11 @@ library("rPython")
 library("heatmap3")
 library('dplyr')
 
-calc_MCR<-function(bins,modules){
+MCR<-function(module,bin){
   # pass these arguments to functions from the python file to
+  result <- system(sprintf("python3 -c 'from KEGG_module_lex_parser import calc_MCR; print(calc_MCR('%s','%s'))'",module, bin), intern=T)
   # return the actual MCR number
- return()
+ return(result)
 }
 
 option_list <- list(make_option(c("-m","--modules"),
@@ -20,19 +21,27 @@ args=parse_args(opt_parser)
 
 # make a dictionary linking full module name and definitions
 
-modules_df <-read.delim(args$modules, header=FALSE)
+modules_df <-read.delim(args$modules)
 module_defs <- modules_df[,3]
 names(module_defs) <- modules_df[,2]
+
+trim <- function(x){
+ x <- gsub(" ","",x)
+ x <- gsub("[[:punct:]]","",x)
+ return(x)
+}
 
 # make a dictionary linking bins and KO content
 bins_df <-read.delim(args$bins, header=FALSE)
 bins_KO <- c()
 i<-1
-for (bin in bins_df[,2]:){
-  bins_KO[[i]]<-strsplit(bin, ',')
+for (bin in bins_df[,2]){
+  bins <- strsplit(bin, ',')
+  bins <- lapply(bins, trim)
+  bins_KO[[i]]<-bins
   i<-i+1
  }
-names(bins_KO) <- bins_KO[,1]
+names(bins_KO) <- bins_df[,1]
 
 
 # create empty data frame for everything w/ as many rows as bins
@@ -44,8 +53,8 @@ names(output) <- c('BINS')
 
 # for each module-bin combo, calculate MCR
 
-for (module in names(module):){
-  col <- lapply(bins_KO, calc_MCR, module = module_defs[[module]])
+for (module in names(module_defs)){
+  col <- lapply(bins_KO, MCR, module = module_defs[[module]])
   names(col) <- module
   output <- left_join(output, col, by = 'BINS')
  }
