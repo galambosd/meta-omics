@@ -49,7 +49,7 @@ total.to_csv('MCR_bins_across_pathways.txt', sep = '\t', doublequote=False)
 
 fig2 = plt.figure(figsize=(10,13))
 ax2 = fig2.add_subplot(1,1,1)
-cg = sb.clustermap(total, linewidths = 1, linecolor='black', cmap = 'Greens',figsize = (30, 5),method = 'ward', metric = 'euclidean', cbar = True, vmin = 0, vmax = 1, xticklabels = True, yticklabels = True, row_cluster = True, col_cluster = True)
+cg = sb.clustermap(total, linewidths = 1, linecolor='black', cmap = 'Greens',figsize = (30, 27),method = 'ward', metric = 'euclidean', cbar = True, vmin = 0, vmax = 1, xticklabels = True, yticklabels = True, row_cluster = True, col_cluster = True)
 #plt.tight_layout(rect = [0.075,0,1,1])
 plt.setp(cg.ax_heatmap.yaxis.get_majorticklabels(), rotation=0, fontsize = 12)
 plt.setp(cg.ax_heatmap.xaxis.get_majorticklabels(), rotation=90, fontsize = 12)
