@@ -4,6 +4,7 @@ import ply.yacc as yacc
 
 num_space = 1.0
 nums_seen = 1.0
+
 tokens = (
     'KOnum',
     'PLUS',
@@ -22,7 +23,16 @@ t_LPAREN=r'\('
 t_RPAREN=r'\)'
 t_SPACE='\ '
 
-lexer=lex.lex()
+precedence = (
+  ('left', 'SPACE'),
+  ('left', 'RPAREN', 'LPAREN'),
+  ('left', 'COMMA'),
+  ('left', 'PLUS', 'MINUS'),
+  ('left', 'KOnum'),
+)
+
+lexer = lex.lex()
+
 # Get the token map from the lexer.  This is required.
 
 def p_expression_plus(p):
@@ -69,19 +79,15 @@ def p_expression_paren(p):
 def p_error(p):
     print("Syntax error in input!")
 
-precedence = (
-  ('left', 'SPACE'),
-  ('left', 'RPAREN', 'LPAREN'),
-  ('left', 'COMMA'),
-  ('left', 'PLUS', 'MINUS'),
-  ('left', 'KOnum'),
-)
-
-def calc_MCR(module, bin):
+def MCR(module, bin):
     # Build the parser
     parser = yacc.yacc()
     global bin_set
     global num_space
+    # reset these global variables each time the function is called
+    num_space = 1.0
+    nums_seen = 1.0
     bin_set = bin
     result = parser.parse(module)
-    return result/num_space
+    result = result/num_space
+    return result
