@@ -11,7 +11,7 @@ FS854_Bin_99	Sulfurovum_99
 FS854_Bin_7	Sulfurovum_7
 FS854_Bin_9	Sulfurovum_9
 FS854_Bin_8	Archaeoglobi_8
-FS854_Bin_69	Methanococci_69
+FS854_Bin_69_1	Methanococci_69
 FS854_Bin_13	Methanococci_13b
 FS854_Bin_43	Thiotrichales_43
 FS854_Bin_10	Thiotrichales_10
