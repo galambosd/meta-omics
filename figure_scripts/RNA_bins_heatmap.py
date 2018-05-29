@@ -52,7 +52,7 @@ plt.cla()
 if args.c or args.r:
     fig2 = plt.figure(figsize=(10,13))
     ax2 = fig2.add_subplot(1,1,1)
-    cg = sb.clustermap(data, linewidths = 1.2, linecolor='black',cmap = 'Blues',standard_scale=1, figsize = (args.size_clustered[0], args.size_clustered[1]),  method = 'ward', metric = 'euclidean', xticklabels = True, yticklabels = True, row_cluster = args.r, col_cluster = args.c)
+    cg = sb.clustermap(data, linewidths = 1.2, linecolor='black',cmap = 'Blues', figsize = (args.size_clustered[0], args.size_clustered[1]), method = 'ward', metric = 'euclidean', xticklabels = True, yticklabels = True, row_cluster = args.r, col_cluster = args.c)
     #plt.tight_layout(rect = [0.075,0,1,1])
     plt.setp(cg.ax_heatmap.yaxis.get_majorticklabels(), rotation=0, fontsize = 12)
     plt.setp(cg.ax_heatmap.xaxis.get_majorticklabels(), rotation=90, fontsize = 12)
