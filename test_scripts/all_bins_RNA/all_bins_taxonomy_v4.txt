@@ -32,7 +32,7 @@ FS866_Bin_4	Thermococci_4
 FS866_Bin_31	Sulfurovum_31
 FS866_Bin_43	Nanoarchaeales_43
 FS881_Bin_4	Sphingomonadales_4
-FS881_Bin_24	Aquificales_24
+FS881_Bin_24	Methanococci_24
 FS881_Bin_33	Aquificales_33
 FS881_Bin_21	Aquificales_21b
 FS881_Bin_40	Aquificales_40
