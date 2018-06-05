@@ -1,0 +1,39 @@
+x.mean	y.mean	Method	p.value
+Pentose.phosphate.pathway..oxidative.phase..glucose.6P....ribulose.5P	0.192307692307692	0.049645390070922	Wilcoxon rank sum test with continuity correction	0.00250864374344663
+Pentose.phosphate.pathway..Pentose.phosphate.cycle.	0.519230769230769	0.49468085106383	Wilcoxon rank sum test with continuity correction	0.577328256121072
+Entner.Doudoroff.pathway..glucose.6P....glyceraldehyde.3P...pyruvate	0.211538461538462	0.0478723404255319	Wilcoxon rank sum test with continuity correction	0.00569250396133951
+D.Galacturonate.degradation..bacteria...D.galacturonate....pyruvate...D.glyceraldehyde.3P	0.126923076923077	0.00851063829787234	Wilcoxon rank sum test with continuity correction	0.00415934556195034
+D.Glucuronate.degradation..D.glucuronate....pyruvate...D.glyceraldehyde.3P	0.123076923076923	0.00851063829787234	Wilcoxon rank sum test with continuity correction	0.0044182423365106
+Phosphate.acetyltransferase.acetate.kinase.pathway..acetyl.CoA....acetate	0.365384615384615	0.0638297872340425	Wilcoxon rank sum test with continuity correction	0.000221092191914347
+Cytochrome.c.oxidase	0.144230769230769	0.0159574468085106	Wilcoxon rank sum test with continuity correction	0.00321252180028648
+Cytochrome.bc1.complex	0.0807692307692308	0.0957446808510638	Wilcoxon rank sum test with continuity correction	0.551080701104184
+Cytochrome.o.ubiquinol.oxidase	0.269230769230769	0	Wilcoxon rank sum test with continuity correction	0.000212136867921692
+Sulfate.transport.system	0.153846153846154	0	Wilcoxon rank sum test with continuity correction	0.00629066620150425
+
+MAGs in group x:
+Methanomicrobia_41
+Flavobacteriales_7
+Sulfurovum_43
+Thiotrichales_56
+Methanomicrobia_84
+Desulfobacterales_74
+Methanomicrobia_45
+Nanohaloarchaea_54
+Thiotrichales_3
+Pseudomonadales_5
+Alteromonadales_3
+Alteromonadales_3b
+Methanomicrobia_78
+Bacteroidetes_37
+Caldilinea_115
+Deltaproteobacteria NaphS2_10
+Clostridia_8
+Clostridia_4
+Thermoprotei_16
+Nanohaloarchaea_18
+Pseudomonadales_3
+Pseudomonadales_4
+Pseudomonadales_1
+Sphingomonadales_2
+Sphingomonadales_5
+Sphingomonadales_4

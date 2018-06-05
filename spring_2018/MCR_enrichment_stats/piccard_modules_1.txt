@@ -1,0 +1,9 @@
+Cytochrome.bc1.complex.respiratory.unit
+Thiosulfate.oxidation.by.SOX.complex..thiosulfate....sulfate
+PTS.system..glucose.specific.II.component
+PTS.system..maltose.glucose.specific.II.component
+PTS.system..beta.glucoside..arbutin.salicin.cellobiose..specific.II.component
+Cytochrome.c.oxidase..prokaryotes
+Cytochrome.c.oxidase..cbb3.type
+Assimilatory.nitrate.reduction..nitrate....ammonia
+Glycolysis..Embden.Meyerhof.pathway...glucose....pyruvate

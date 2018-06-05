@@ -1,0 +1,32 @@
+x.mean	y.mean	Method	p.value
+Cytochrome.bc1.complex.respiratory.unit	0.675	0.283018867924528	Wilcoxon rank sum test with continuity correction	0.00182766467950395
+Thiosulfate.oxidation.by.SOX.complex..thiosulfate....sulfate	0.653333333333333	0.168553459119497	Wilcoxon rank sum test with continuity correction	8.43812659554949e-05
+PTS.system..glucose.specific.II.component	0.324905765683693	0.0553951064207498	Wilcoxon rank sum test with continuity correction	0.00197755769110918
+PTS.system..maltose.glucose.specific.II.component	0.324905765683693	0.0553951064207498	Wilcoxon rank sum test with continuity correction	0.00197755769110918
+PTS.system..beta.glucoside..arbutin.salicin.cellobiose..specific.II.component	0.324905765683693	0.0553951064207498	Wilcoxon rank sum test with continuity correction	0.00197755769110918
+Cytochrome.c.oxidase..prokaryotes	0.374886877828054	0.193396226415094	Wilcoxon rank sum test with continuity correction	0.158796206176826
+Cytochrome.c.oxidase..cbb3.type	0.5	0.220125786163522	Wilcoxon rank sum test with continuity correction	0.0148401515357238
+Assimilatory.nitrate.reduction..nitrate....ammonia	0.475	0.169811320754717	Wilcoxon rank sum test with continuity correction	0.00792913513516281
+Glycolysis..Embden.Meyerhof.pathway...glucose....pyruvate	0.78	0.70188679245283	Wilcoxon rank sum test with continuity correction	0.0810981648211402
+
+MAGs in group x:
+Nautiliales_88
+Methanococci_69
+Other Campylobacterales_2
+Aquificales_14
+Aquificales_21b
+Sulfurovum_37
+Sulfurovum_99
+Sulfurovum_43b
+Sulfurovum_9
+Other Campylobacterales_12
+Sulfurovum_13
+Thiotrichales_43
+Zetaproteobacteria_110
+Sulfurovum_45
+Sulfurovum_7
+Flavobacteriales_7
+Desulfobacterales_29
+Other Campylobacterales_101
+Thiotrichales_10
+Thiotrichales_60

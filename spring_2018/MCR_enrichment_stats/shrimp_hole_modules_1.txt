@@ -1,0 +1,10 @@
+Pentose.phosphate.pathway..oxidative.phase..glucose.6P....ribulose.5P
+Pentose.phosphate.pathway..Pentose.phosphate.cycle.
+Entner.Doudoroff.pathway..glucose.6P....glyceraldehyde.3P...pyruvate
+D.Galacturonate.degradation..bacteria...D.galacturonate....pyruvate...D.glyceraldehyde.3P
+D.Glucuronate.degradation..D.glucuronate....pyruvate...D.glyceraldehyde.3P
+Phosphate.acetyltransferase.acetate.kinase.pathway..acetyl.CoA....acetate
+Cytochrome.c.oxidase
+Cytochrome.bc1.complex
+Cytochrome.o.ubiquinol.oxidase
+Sulfate.transport.system

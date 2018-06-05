@@ -1,0 +1,96 @@
+x.mean	y.mean	Method	p.value
+PTS.system..glucose.specific.II.component	0.324905765683693	0.0553951064207498	Wilcoxon rank sum test with continuity correction	0.00197755769110918
+Glycolysis..Embden.Meyerhof.pathway...glucose....pyruvate	0.78	0.70188679245283	Wilcoxon rank sum test with continuity correction	0.0810981648211402
+Cytochrome.c.oxidase	0.025	0.0754716981132075	Wilcoxon rank sum test with continuity correction	0.386727164706231
+Semi.phosphorylative.Entner.Doudoroff.pathway..gluconate.galactonate....glycerate.3P	0	0.0141509433962264	Wilcoxon rank sum test with continuity correction	0.28864516252225
+Thiosulfate.oxidation.by.SOX.complex..thiosulfate....sulfate	0.653333333333333	0.168553459119497	Wilcoxon rank sum test with continuity correction	8.43812659554949e-05
+X3.Hydroxypropionate.bi.cycle	0.220833333333333	0.202131376659679	Wilcoxon rank sum test with continuity correction	0.650074963349839
+Citrate.cycle..TCA.cycle..Krebs.cycle.	0.818229166666667	0.64563679245283	Wilcoxon rank sum test with continuity correction	0.0221760851272169
+Reductive.citrate.cycle..Arnon.Buchanan.cycle.	0.6875	0.543632075471698	Wilcoxon rank sum test with continuity correction	0.0108409652828595
+Citrate.cycle..first.carbon.oxidation..oxaloacetate....2.oxoglutarate	0.75	0.59748427672956	Wilcoxon rank sum test with continuity correction	0.164659710812427
+Pentose.phosphate.pathway..Pentose.phosphate.cycle.	0.6	0.466981132075472	Wilcoxon rank sum test with continuity correction	0.00993579934379606
+Pentose.phosphate.pathway..oxidative.phase..glucose.6P....ribulose.5P	0.0666666666666667	0.113207547169811	Wilcoxon rank sum test with continuity correction	0.252301415339253
+Hydroxypropionate.hydroxybutylate.cycle	0.0357142857142857	0.0869272237196766	Wilcoxon rank sum test with continuity correction	0.00634320777995511
+Cytochrome.c.oxidase..cbb3.type	0.5	0.220125786163522	Wilcoxon rank sum test with continuity correction	0.0148401515357238
+Cytochrome.o.ubiquinol.oxidase	0	0.132075471698113	Wilcoxon rank sum test with continuity correction	0.0919083271424248
+Glycolysis..core.module.involving.three.carbon.compounds	0.825	0.783018867924528	Wilcoxon rank sum test with continuity correction	0.726099490001839
+F.type.ATPase..eukaryotes	0	0	Wilcoxon rank sum test with continuity correction	NA
+Dissimilatory.nitrate.reduction..nitrate....ammonia	0.39375	0.20125786163522	Wilcoxon rank sum test with continuity correction	0.00342561105819226
+Gluconeogenesis..oxaloacetate....fructose.6P	0.8875	0.742924528301887	Wilcoxon rank sum test with continuity correction	0.00679897713285528
+Fumarate.reductase..prokaryotes	0.170236197795269	0.0195825192686138	Wilcoxon rank sum test with continuity correction	2.12118931994083e-06
+Methane.oxidation..methanotroph..methane....formaldehyde	0	0	Wilcoxon rank sum test with continuity correction	NA
+PRPP.biosynthesis..ribose.5P....PRPP	0.95	0.811320754716981	Wilcoxon rank sum test with continuity correction	0.145103015155697
+D.Glucuronate.degradation..D.glucuronate....pyruvate...D.glyceraldehyde.3P	0.01	0.0641509433962264	Wilcoxon rank sum test with continuity correction	0.23744752944413
+NADH.quinone.oxidoreductase..prokaryotes	0.875925925925926	0.56785464709993	Wilcoxon rank sum test with continuity correction	0.00878523809111986
+X2.Oxocarboxylic.acid.chain.extension..2.oxoglutarate....2.oxoadipate....2.oxopimelate....2.oxosuberate	0.05	0.0817610062893082	Wilcoxon rank sum test with continuity correction	0.349588243081072
+F420.biosynthesis	0.05	0.207547169811321	Wilcoxon rank sum test with continuity correction	0.0867571651787419
+Formaldehyde.assimilation..xylulose.monophosphate.pathway	0.4125	0.160377358490566	Wilcoxon rank sum test with continuity correction	1.25746410402155e-05
+Pentose.phosphate.pathway..archaea..fructose.6P....ribose.5P	0.133333333333333	0.415094339622642	Wilcoxon rank sum test with continuity correction	0.00576487579286061
+Cytochrome.bc1.complex.respiratory.unit	0.675	0.283018867924528	Wilcoxon rank sum test with continuity correction	0.00182766467950395
+Methanogenesis..methylamine.dimethylamine.trimethylamine....methane	0.0609375	0.117610062893082	Wilcoxon rank sum test with continuity correction	0.160871461870166
+Reductive.acetyl.CoA.pathway..Wood.Ljungdahl.pathway.	0.202380952380952	0.226415094339623	Wilcoxon rank sum test with continuity correction	0.50171935476791
+Pyruvate.oxidation..pyruvate....acetyl.CoA	0.866666666666667	0.888364779874214	Wilcoxon rank sum test with continuity correction	0.923608941644435
+Sulfate.transport.system	0	0.0754716981132075	Wilcoxon rank sum test with continuity correction	0.215224471677057
+F.type.ATPase..prokaryotes.and.chloroplasts	0.801163768002097	0.546758676091393	Wilcoxon rank sum test with continuity correction	0.00923484476728608
+D.Galacturonate.degradation..bacteria...D.galacturonate....pyruvate...D.glyceraldehyde.3P	0.01	0.0660377358490566	Wilcoxon rank sum test with continuity correction	0.233337421041313
+Methanogenesis..acetate....methane	0.218402777777778	0.311425576519916	Wilcoxon rank sum test with continuity correction	0.0456678518721852
+Pentose.phosphate.pathway..non.oxidative.phase..fructose.6P....ribose.5P	0.9375	0.64622641509434	Wilcoxon rank sum test with continuity correction	0.00140500861126118
+V.type.ATPase..eukaryotes	0	0	Wilcoxon rank sum test with continuity correction	NA
+Manganese.zinc.iron.transport.system	0	0.0378624794225655	Wilcoxon rank sum test with continuity correction	0.288739503991281
+alpha.Hemolysin.cyclolysin.transport.system	0.00121740319273002	0.000817534031098684	Wilcoxon rank sum test with continuity correction	0.324181930143713
+Cytochrome.bc1.complex	0.154444444444444	0.0662473794549266	Wilcoxon rank sum test with continuity correction	0.00182766467950395
+Formaldehyde.assimilation..ribulose.monophosphate.pathway	0.45	0.311320754716981	Wilcoxon rank sum test with continuity correction	0.00470391234930944
+Formaldehyde.assimilation..serine.pathway	0.383333333333333	0.368972746331237	Wilcoxon rank sum test with continuity correction	0.547617926520465
+Manganese.iron.transport.system	0	0.00012748597654258	Wilcoxon rank sum test with continuity correction	0.559502676313349
+Iron.zinc.manganese.copper.transport.system	0	5.36020583190395e-05	Wilcoxon rank sum test with continuity correction	0.559502676313349
+Incomplete.reductive.citrate.cycle..acetyl.CoA....oxoglutarate	0.498214285714286	0.378840970350404	Wilcoxon rank sum test with continuity correction	0.0475845522873216
+Methanogenesis..methanol....methane	0.08125	0.148008385744235	Wilcoxon rank sum test with continuity correction	0.177047848413838
+Methanogenesis..CO2....methane	0.06796875	0.191116352201258	Wilcoxon rank sum test with continuity correction	0.0443501665104392
+Nitrogen.fixation..nitrogen....ammonia	0.0166666666666667	0.0880503144654088	Wilcoxon rank sum test with continuity correction	0.23744752944413
+Semi.phosphorylative.Entner.Doudoroff.pathway..gluconate....glycerate.3P	0.37	0.29811320754717	Wilcoxon rank sum test with continuity correction	0.0404589534536917
+Coenzyme.M.biosynthesis	0.0375	0.0566037735849057	Wilcoxon rank sum test with continuity correction	0.283587457652692
+Succinate.dehydrogenase..ubiquinone.	0	0.000391529468149655	Wilcoxon rank sum test with continuity correction	0.288770943460605
+Cytochrome.c.oxidase..prokaryotes	0.374886877828054	0.193396226415094	Wilcoxon rank sum test with continuity correction	0.158796206176826
+Dissimilatory.sulfate.reduction..sulfate....H2S	0.341666666666667	0.238993710691824	Wilcoxon rank sum test with continuity correction	0.0566471387987622
+Methylaspartate.cycle	0.236363636363636	0.219554030874786	Wilcoxon rank sum test with continuity correction	0.497495198270879
+Nitrification..ammonia....nitrite	0	0	Wilcoxon rank sum test with continuity correction	NA
+PTS.system..maltose.glucose.specific.II.component	0.324905765683693	0.0553951064207498	Wilcoxon rank sum test with continuity correction	0.00197755769110918
+Denitrification..nitrate....nitrogen	0.371875	0.0966981132075472	Wilcoxon rank sum test with continuity correction	3.62735439892404e-06
+Entner.Doudoroff.pathway..glucose.6P....glyceraldehyde.3P...pyruvate	0.0625	0.122641509433962	Wilcoxon rank sum test with continuity correction	0.307485280750762
+Citrate.cycle..second.carbon.oxidation..2.oxoglutarate....oxaloacetate	0.859166666666667	0.674528301886792	Wilcoxon rank sum test with continuity correction	0.0243708700840504
+Nitrate.nitrite.transport.system	0	0.0188679245283019	Wilcoxon rank sum test with continuity correction	0.559502676313349
+Cytochrome.bd.ubiquinol.oxidase	0.2	0.20125786163522	Wilcoxon rank sum test with continuity correction	0.93752395821392
+V.A.type.ATPase..prokaryotes	0.065	0.373059751303744	Wilcoxon rank sum test with continuity correction	0.013067378942931
+Assimilatory.nitrate.reduction..nitrate....ammonia	0.475	0.169811320754717	Wilcoxon rank sum test with continuity correction	0.00792913513516281
+Non.phosphorylative.Entner.Doudoroff.pathway..gluconate.galactonate....glycerate	0.0166666666666667	0.163522012578616	Wilcoxon rank sum test with continuity correction	0.000568563545759489
+Iron.complex.transport.system	0.47	0.694084024593493	Wilcoxon rank sum test with continuity correction	0.123509404111678
+Dicarboxylate.hydroxybutyrate.cycle	0.369230769230769	0.375544267053701	Wilcoxon rank sum test with continuity correction	0.59168570753288
+Complete.nitrification..comammox..ammonia....nitrite....nitrate	0	0.0125786163522013	Wilcoxon rank sum test with continuity correction	0.393675947872373
+Energy.coupling.factor.transport.system	0.0375	0.160377358490566	Wilcoxon rank sum test with continuity correction	0.0691618537271395
+Acetyl.CoA.pathway..CO2....acetyl.CoA	0.05625	0.179245283018868	Wilcoxon rank sum test with continuity correction	0.0772399191995682
+PTS.system..beta.glucoside..arbutin.salicin.cellobiose..specific.II.component	0.324905765683693	0.0553951064207498	Wilcoxon rank sum test with continuity correction	0.00197755769110918
+Multidrug.hemolysin.transport.system	0	0	Wilcoxon rank sum test with continuity correction	NA
+Phosphate.acetyltransferase.acetate.kinase.pathway..acetyl.CoA....acetate	0.025	0.226415094339623	Wilcoxon rank sum test with continuity correction	0.0289473417126361
+Ascorbate.biosynthesis..plants..glucose.6P....ascorbate	0.233333333333333	0.285115303983228	Wilcoxon rank sum test with continuity correction	0.117509175846096
+
+MAGs in group x:
+Nautiliales_88
+Methanococci_69
+Other Campylobacterales_2
+Aquificales_14
+Aquificales_21b
+Sulfurovum_37
+Sulfurovum_99
+Sulfurovum_43b
+Sulfurovum_9
+Other Campylobacterales_12
+Sulfurovum_13
+Thiotrichales_43
+Zetaproteobacteria_110
+Sulfurovum_45
+Sulfurovum_7
+Flavobacteriales_7
+Desulfobacterales_29
+Other Campylobacterales_101
+Thiotrichales_10
+Thiotrichales_60
