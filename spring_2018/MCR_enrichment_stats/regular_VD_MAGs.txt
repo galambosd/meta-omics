@@ -1,0 +1,46 @@
+Nautiliales_88
+Methanococci_69
+Other Campylobacterales_2
+Aquificales_14
+Aquificales_21b
+Sulfurovum_37
+Sulfurovum_99
+Sulfurovum_43b
+Sulfurovum_9
+Other Campylobacterales_12
+Sulfurovum_13
+Thiotrichales_43
+Zetaproteobacteria_110
+Sulfurovum_45
+Sulfurovum_7
+Flavobacteriales_7
+Desulfobacterales_29
+Other Campylobacterales_101
+Thiotrichales_10
+Thiotrichales_60
+Methanomicrobia_41
+Flavobacteriales_7
+Sulfurovum_43
+Thiotrichales_56
+Methanomicrobia_84
+Desulfobacterales_74
+Methanomicrobia_45
+Nanohaloarchaea_54
+Thiotrichales_3
+Pseudomonadales_5
+Alteromonadales_3
+Alteromonadales_3b
+Methanomicrobia_78
+Bacteroidetes_37
+Caldilinea_115
+Deltaproteobacteria NaphS2_10
+Clostridia_8
+Clostridia_4
+Thermoprotei_16
+Nanohaloarchaea_18
+Pseudomonadales_3
+Pseudomonadales_4
+Pseudomonadales_1
+Sphingomonadales_2
+Sphingomonadales_5
+Sphingomonadales_4
