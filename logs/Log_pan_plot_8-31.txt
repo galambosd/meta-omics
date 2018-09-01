@@ -1,33 +1,3 @@
-// pan plot log
-~ dgalambos$ pip install xlrd --user
-Collecting xlrd
-  Using cached xlrd-1.1.0-py2.py3-none-any.whl
-Installing collected packages: xlrd
-Successfully installed xlrd-1.1.0
-
-dgalambos$ python pan_binary_heatmap.py pan_binary_heatmap.xlsx
-Index([u'Alteromonadales_3', u'Aquificales_14', u'Aquificales_21',
-       u'Aquificales_24', u'Aquificales_33', u'Aquificales_40',
-       u'Archaeoglobi_26', u'Archaeoglobi_8', u'Bacteroidetes_37',
-       u'Caldilinea_115', u'Candidatus_Caldiarchaeum_50', u'Clostridia_4',
-       u'Clostridia_8', u'Deltaproteobacteria_NaphS2_10',
-       u'Desulfobacterales_16', u'Desulfobacterales_26',
-       u'Desulfobacterales_29', u'Desulfobacterales_74',
-       u'Flavobacteriales_20', u'Flavobacteriales_7', u'Methanococci_13',
-       u'Methanococci_13b', u'Methanococci_69b', u'Methanococci_7',
-       u'Methanomicrobia_41', u'Methanomicrobia_45', u'Methanomicrobia_78',
-       u'Methanomicrobia_84', u'Nanoarchaeales_43', u'Nanohaloarchaea_18',
-       u'Nanohaloarchaea_54', u'Nautiliales_88',
-       u'Other_Campylobacterales_101', u'Other_Campylobacterales_12',
-       u'Other_Campylobacterales_2', u'Pseudomonadales_1',
-       u'Pseudomonadales_3', u'Pseudomonadales_4', u'Pseudomonadales_5',
-       u'Sphingomonadales_2', u'Sphingomonadales_4', u'Sphingomonadales_5',
-       u'Sulfurovum_13', u'Sulfurovum_31', u'Sulfurovum_37', u'Sulfurovum_43',
-       u'Sulfurovum_45', u'Sulfurovum_7', u'Sulfurovum_9', u'Sulfurovum_99',
-       u'Thermococci_4', u'Thermoprotei_16', u'Thermoprotei_20',
-       u'Thermoprotei_23', u'Thermoprotei_29', u'Thermoprotei_32',
-       u'Thermoprotei_4', u'Thermoprotei_5', u'Thiotrichales_10',
-       u'Thiotrichales_21', u'Thiotrichales_27', u'Thiotrichales_3',
-       u'Thiotrichales_33', u'Thiotrichales_34', u'Thiotrichales_43',
-       u'Thiotrichales_56', u'Thiotrichales_60', u'Zetaproteobacteria_110'],
-      dtype='object')
+version https://git-lfs.github.com/spec/v1
+oid sha256:d91b861cd62949242955587e24bd7660cacc0199956e48677a6c8a9c35fce3e3
+size 1908
