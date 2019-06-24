@@ -1,3 +1,7 @@
+# This script uses KEGG_module_lex_parser to calculate the MCR for each
+# MAG using a list of all the KOs present in the MAG.
+# This is then plotted in a heatmap using seaborn/matplotlib.
+
 import pandas as pd
 import numpy as np
 from sys import argv

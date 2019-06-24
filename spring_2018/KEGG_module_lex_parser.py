@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+# This script uses an external parser to calculate MCS based on the definitions
+# provided by get_module_defs.py. This script is called in
+# calculate_module_completion.py.
+
 import ply.lex as lex
 import ply.yacc as yacc
 

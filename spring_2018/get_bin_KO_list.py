@@ -1,3 +1,6 @@
+# This script uses anvio files to make a simply-formatted
+# list of the KOs in each MAG
+
 from sys import argv
 
 

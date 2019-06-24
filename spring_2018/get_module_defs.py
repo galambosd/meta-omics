@@ -1,9 +1,17 @@
-#!/usr/bin/env python3
+# This script takes a list of user-provided KEGG pathways ("modules")
+# and provides the KO definitions of the reactions in the pathway.
+
 import requests
 import argparse as ap
 
-parser = ap.ArgumentParser(description = "A script using the KEGG API to download module definitions for a list of modules.")
-parser.add_argument('M_list', help = "A .txt file with the list of KEGG modules as M#####.")
+parser = ap.ArgumentParser(description = """A script using the KEGG API
+                           to download module definitions for a list of
+                           modules.""")
+
+
+parser.add_argument('M_list',
+                    help = """A .txt file with the list of KEGG modules
+                    as M#####.""")
 
 args = parser.parse_args()
 
